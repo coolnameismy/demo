@@ -5,4 +5,4 @@
 ---
 
 ## 目录(catalog)
-- draw：ios项目，画图demo，对应的文章地址：
+- draw：ios绘图基础 demo，对应的文章地址：http://liuyanwei.jumppo.com/2015/07/25/ios-draw-base.html
