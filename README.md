@@ -1,7 +1,7 @@
 
 #    这个是我的博客文章内容的演示代码。</br>
-#    this is article in my blog(http://liuyanwei.jumppo.com) refer code
->   我blog地址:http://liuyanwei.jumppo.com
+#    this is article in my blog refer code
+> blog地址:http://liuyanwei.jumppo.com
 ---
 
 ## 目录(catalog)
