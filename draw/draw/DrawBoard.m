@@ -75,7 +75,7 @@
     
     
     //画矩形,画椭圆，多边形
-    [self drawShare:ctx];
+    [self drawShape:ctx];
     
     //画图片
     [self drawPicture:ctx];
@@ -210,7 +210,7 @@
 
 
 //画矩形,画椭圆，多边形
--(void)drawShare:(CGContextRef)ctx{
+-(void)drawShape:(CGContextRef)ctx{
     
     CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
     
