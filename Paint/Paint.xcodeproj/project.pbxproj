@@ -17,6 +17,13 @@
 		E10271471B646FE300A7F178 /* PaintViewV01.m in Sources */ = {isa = PBXBuildFile; fileRef = E10271461B646FE300A7F178 /* PaintViewV01.m */; };
 		E102714A1B65109400A7F178 /* PaintViewV02.m in Sources */ = {isa = PBXBuildFile; fileRef = E10271491B65109400A7F178 /* PaintViewV02.m */; };
 		E10271511B651F1300A7F178 /* PaintStep.m in Sources */ = {isa = PBXBuildFile; fileRef = E10271501B651F1300A7F178 /* PaintStep.m */; };
+		F09CDA601B65C97000FCB02B /* PaintViewV03.m in Sources */ = {isa = PBXBuildFile; fileRef = F09CDA5F1B65C97000FCB02B /* PaintViewV03.m */; };
+		F09CDA661B65CDC900FCB02B /* bezierBoard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CDA631B65CDC900FCB02B /* bezierBoard@2x.png */; };
+		F09CDA671B65CDC900FCB02B /* bezierBoard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CDA641B65CDC900FCB02B /* bezierBoard@3x.png */; };
+		F09CDA681B65CDC900FCB02B /* ui.sketch in Resources */ = {isa = PBXBuildFile; fileRef = F09CDA651B65CDC900FCB02B /* ui.sketch */; };
+		F09CDA6B1B65D7C700FCB02B /* bezierBoard_l@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CDA691B65D7C700FCB02B /* bezierBoard_l@2x.png */; };
+		F09CDA6C1B65D7C700FCB02B /* bezierBoard_l@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F09CDA6A1B65D7C700FCB02B /* bezierBoard_l@3x.png */; };
+		F09CDA6F1B65DAE200FCB02B /* BezierStep.m in Sources */ = {isa = PBXBuildFile; fileRef = F09CDA6E1B65DAE200FCB02B /* BezierStep.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,15 @@
 		E10271491B65109400A7F178 /* PaintViewV02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintViewV02.m; sourceTree = "<group>"; };
 		E102714F1B651F1300A7F178 /* PaintStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintStep.h; sourceTree = "<group>"; };
 		E10271501B651F1300A7F178 /* PaintStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintStep.m; sourceTree = "<group>"; };
+		F09CDA5E1B65C97000FCB02B /* PaintViewV03.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintViewV03.h; sourceTree = "<group>"; };
+		F09CDA5F1B65C97000FCB02B /* PaintViewV03.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintViewV03.m; sourceTree = "<group>"; };
+		F09CDA631B65CDC900FCB02B /* bezierBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bezierBoard@2x.png"; sourceTree = "<group>"; };
+		F09CDA641B65CDC900FCB02B /* bezierBoard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bezierBoard@3x.png"; sourceTree = "<group>"; };
+		F09CDA651B65CDC900FCB02B /* ui.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = ui.sketch; sourceTree = "<group>"; };
+		F09CDA691B65D7C700FCB02B /* bezierBoard_l@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bezierBoard_l@2x.png"; sourceTree = "<group>"; };
+		F09CDA6A1B65D7C700FCB02B /* bezierBoard_l@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bezierBoard_l@3x.png"; sourceTree = "<group>"; };
+		F09CDA6D1B65DAE200FCB02B /* BezierStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierStep.h; sourceTree = "<group>"; };
+		F09CDA6E1B65DAE200FCB02B /* BezierStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierStep.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +119,8 @@
 				E10271461B646FE300A7F178 /* PaintViewV01.m */,
 				E10271481B65109400A7F178 /* PaintViewV02.h */,
 				E10271491B65109400A7F178 /* PaintViewV02.m */,
+				F09CDA5E1B65C97000FCB02B /* PaintViewV03.h */,
+				F09CDA5F1B65C97000FCB02B /* PaintViewV03.m */,
 			);
 			path = Paint;
 			sourceTree = "<group>";
@@ -110,6 +128,7 @@
 		E102711F1B646FCB00A7F178 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F09CDA611B65CDC900FCB02B /* asset */,
 				E10271201B646FCB00A7F178 /* Info.plist */,
 				E10271211B646FCB00A7F178 /* main.m */,
 			);
@@ -138,8 +157,30 @@
 			children = (
 				E102714F1B651F1300A7F178 /* PaintStep.h */,
 				E10271501B651F1300A7F178 /* PaintStep.m */,
+				F09CDA6D1B65DAE200FCB02B /* BezierStep.h */,
+				F09CDA6E1B65DAE200FCB02B /* BezierStep.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F09CDA611B65CDC900FCB02B /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				F09CDA621B65CDC900FCB02B /* images */,
+				F09CDA651B65CDC900FCB02B /* ui.sketch */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
+		F09CDA621B65CDC900FCB02B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F09CDA691B65D7C700FCB02B /* bezierBoard_l@2x.png */,
+				F09CDA6A1B65D7C700FCB02B /* bezierBoard_l@3x.png */,
+				F09CDA631B65CDC900FCB02B /* bezierBoard@2x.png */,
+				F09CDA641B65CDC900FCB02B /* bezierBoard@3x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +263,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09CDA671B65CDC900FCB02B /* bezierBoard@3x.png in Resources */,
+				F09CDA661B65CDC900FCB02B /* bezierBoard@2x.png in Resources */,
 				E102712B1B646FCB00A7F178 /* Main.storyboard in Resources */,
+				F09CDA6B1B65D7C700FCB02B /* bezierBoard_l@2x.png in Resources */,
+				F09CDA681B65CDC900FCB02B /* ui.sketch in Resources */,
 				E10271301B646FCB00A7F178 /* LaunchScreen.xib in Resources */,
+				F09CDA6C1B65D7C700FCB02B /* bezierBoard_l@3x.png in Resources */,
 				E102712D1B646FCB00A7F178 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +292,8 @@
 				E102714A1B65109400A7F178 /* PaintViewV02.m in Sources */,
 				E10271511B651F1300A7F178 /* PaintStep.m in Sources */,
 				E10271471B646FE300A7F178 /* PaintViewV01.m in Sources */,
+				F09CDA6F1B65DAE200FCB02B /* BezierStep.m in Sources */,
+				F09CDA601B65C97000FCB02B /* PaintViewV03.m in Sources */,
 				E10271251B646FCB00A7F178 /* AppDelegate.m in Sources */,
 				E10271221B646FCB00A7F178 /* main.m in Sources */,
 			);
@@ -442,6 +490,7 @@
 				E10271411B646FCC00A7F178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E10271421B646FCC00A7F178 /* Build configuration list for PBXNativeTarget "PaintTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +499,7 @@
 				E10271441B646FCC00A7F178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
