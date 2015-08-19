@@ -14,7 +14,7 @@
 		<string>https://github.com/coolnameismy/demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Paint/Paint.xcodeproj</string>
+	<string>paint/Paint.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>166A4E8510ED89EE6DC60B6EA2C19454617CEB30</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>166A4E8510ED89EE6DC60B6EA2C19454617CEB30</string>
 			<key>IDESourceControlWCCName</key>
-			<string>blogDemo</string>
+			<string>BlogDemo</string>
 		</dict>
 	</array>
 </dict>
