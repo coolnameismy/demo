@@ -1,0 +1,207 @@
+<!--
+    unsliders.js内部结构
+
+    unsliders一共定义了8个对象，分别是：o,init,to,play,stop,next,perv,nav
+
+    o:unsliders使用时候的配置参数，我翻译并解释了一下：
+    _.o = {
+        speed: 500,     // 切换时候的运动速度,false是不进行切换 (integer or boolean)
+        delay: 3000,    // 切换的时间间隔，false是不自动切换 (integer or boolean)
+        init: 0,        // 初始化时候的延迟，false为不延迟 (integer or boolean)
+        pause: !f,      // 鼠标移上去的时候是否需要暂停切换 默认值是yes(boolean)
+        loop: !f,       // 是否循环切换 (boolean)
+        keys: f,        // 快捷键 (boolean)
+        dots: f,        // 是否显现 可以切换的控制点  (boolean)
+        arrows: f,      // 是否显现 上一页下一页的箭头 (boolean)
+        prev: '&larr;', // 上一页按钮的文字 (string)
+        next: '&rarr;', // 下一页按钮的文字
+        fluid: f,       // 是否是一个百分比的宽度（boolean)
+        starting: f,    // 开始切换时的回叫函数 (function)
+        complete: f,    // 切换完成时候的回叫函数 (function)
+        items: '>ul',   // slides jquery选择容器的标签
+        item: '>li',    // slides items 选择容器的标签
+        easing: 'swing',// 动画运动的方式    swing 或者linear，这个是由jquery $(selector).animate(styles,speed,easing,callback) 方法提供的参数。
+        autoplay: true  // 自动播放
+    };
+
+    定义了这么多的参数，都是储存再了o中，在init方法中把参数赋值给o，具体语句如下：
+    _.init = function(el, o) {
+        //  Check whether we're passing any options in to Unslider
+        _.o = $.extend(_.o, o);
+    }
+
+    先简单说说，后面在深入分析init方法。
+
+    init：unsliders的构造方法，通过对这个方法传入jquery对象和unsliders的构造参数，生成一个unsliders的实例
+
+    to: Move Unslider to a slide index ，切换sliders的方法
+
+    play: 定时调用to方法，切换到下一个
+
+    stop：取消play的定时器
+
+    next：立刻切换到下一个
+
+    prev：立刻切换到上一个
+
+    nav： 构造silders中间的点样式和点击切换，以及左右箭头切换上一张下一张
+
+
+    这样看下去，整个unsliders的结构就都已经看清了，下面来仔细看一下init方法，以及其他方法里面的注意点
+
+
+
+    //归纳整个unslider值得学习的地方。感叹下，以后要多看看源码
+
+-$.data
+-$.resize
+-(function($, f) {})(jQuery, false)
+-$.fn 用法
+-$.extend 用法
+    1:扩展静态方法 $.extend({  test:function(){alert('test函数')}   })
+    2:合并多个对象
+     var obj = jQuery.extend(
+         { name: "John", "location": { "city": "Boston" } },
+         { last: "Resig", "location": { "state": "MA" } }
+     );
+     -_.o = $.extend(_.o, o);
+     3:深层嵌套
+     var obj = jQuery.extend( true,
+         { name: "John", "location": { "city": "Boston" } },
+         { last: "Resig", "location": { "state": "MA" } }
+     );
+
+
+
+-jQuery.event自定义事件机制-jQuery.event.special范例
+-一些语法的精简写法 ，比如o.dots && nav('dot')，
+
+-jquery.queue:
+
+var FUNC=[
+    function(){alert("方法1")},
+    function(){alert("方法2")},
+    function(){alert("方法3")},
+    function(){alert("方法结束")}
+];
+$(document).queue(FUNC);//存入队列，不指定队列名称时会设置默认名称为fx，并直接返回函数数组的第一个元素 alert("方法1")
+$(document).dequeue("fx");弹出队列第一个函数 ，会执行alert("方法2")  dequeue的时候必须指定队列名称
+$(document).queue("fx");//返回当前队列
+
+$(document).queue("q",FUNC);//存入队列，指定队列名称时不会返回函数数组的第一个元素
+$(document).dequeue("q");弹出队列第一个函数 ，会执行alert("方法1")
+$(document).queue("q");//返回当前队列
+
+
+一些语法的简写
+
+//连续赋值
+var me = $(this),
+    key = 'unslider' + (len > 1 ? '-' + ++index : ''),
+    instance = (new Unslider).init(me, o);
+
+//  && 代替if语句
+ o.dots && nav('dot');
+
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"> </script>
+    <!--<script type="text/javascript" src="../js/unslider.js"> </script>-->
+    <link rel="stylesheet" href="sliders.css" >
+</head>
+
+<body>
+
+    <div class="banner">
+        <ul >
+            <li style="background-image: url(http://unslider.com/img/sunset.jpg);"></li>
+            <li style="background-image: url(http://unslider.com/img/wood.jpg);"></li>
+            <li style="background-image: url(http://unslider.com/img/subway.jpg);"></li>
+            <li style="background-image: url(http://unslider.com/img/subway.jpg);"></li>
+        </ul>
+    </div>
+
+
+    <!--unsilder源码 start-->
+    <script>
+
+        (function($, f) {
+            var Unslider = function() {
+                //Unslider 的代码实现
+                var _ = this;
+
+                //  Set some options
+                _.o = {
+                    speed: 500,     // animation speed, false for no transition (integer or boolean)
+                    delay: 3000,    // delay between slides, false for no autoplay (integer or boolean)
+                    init: 0,        // init delay, false for no delay (integer or boolean)
+                    pause: !f,      // pause on hover (boolean)
+                    loop: !f,       // infinitely looping (boolean)
+                    keys: f,        // keyboard shortcuts (boolean)
+                    dots: f,        // display dots pagination (boolean)
+                    arrows: f,      // display prev/next arrows (boolean)
+                    prev: '&larr;', // text or html inside prev button (string)
+                    next: '&rarr;', // same as for prev option
+                    fluid: f,       // is it a percentage width? (boolean)
+                    starting: f,    // invoke before animation (function with argument)
+                    complete: f,    // invoke after animation (function with argument)
+                    items: '>ul',   // slides container selector
+                    item: '>li',    // slidable items selector
+                    easing: 'swing',// easing function to use for animation
+                    autoplay: true  // enable autoplay on initialisation
+                };
+
+                _.init = function(el, o) {
+                    //  Check whether we're passing any options in to Unslider
+                    _.o = $.extend(_.o, o);
+                }
+
+
+            };
+            $.fn.unslider = function(o) {
+                var len = this.length;
+                return this.each(function(index) {
+                    var me = $(this),
+                            key = 'unslider' + (len > 1 ? '-' + ++index : ''),
+                            instance = (new Unslider).init(me, o);
+                    me.data(key, instance).data('key', key);
+                });
+            };
+            Unslider.version = "1.0.0";
+        })(jQuery, false);
+
+    </script>
+    <!--unsilder源码 end-->
+
+    <script>
+        //unsilder调用
+        $(function() {
+            $('.banner').unslider({
+                speed: 500,               //  The speed to animate each slide (in milliseconds)
+                delay: 1500,              //  The delay between slide animations (in milliseconds)
+                complete: function () {
+                },  //  A function that gets called after every slide animation
+                keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+                dots: true,               //  Display dot navigation
+                fluid: false              //  Support responsive design. May break non-responsive designs
+            });
+        });
+    </script>
+
+
+
+</body>
+
+
+
+
+</html>
