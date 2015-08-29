@@ -23,4 +23,8 @@ ios蓝牙开发（二）主从模式的ios代码实现 文章地址：http://liu
 
 文章地址：http://liuyanwei.jumppo.com/2015/08/19/ios-ThreadAndAsynchronization.html
 
----
+#### DeepIntoUnslider
+
+深入理解unslider.js源码  文章地址：http://liuyanwei.jumppo.com/2015/08/29/go-deep-into-unsilder.js.html
+
+--
