@@ -2,7 +2,7 @@
  *   Unslider by @idiot and @damirfoy
  *   Contributors:
  *   - @ShamoX
- *
+ *  翻译和注释：刘彦玮 http://liuyanwei.jumppo.com
  */
 
 (function($, f) {
@@ -169,7 +169,7 @@
 
             if ((!target.length || index < 0) && o.loop === f) return;
 
-            //  Check if it's out of bounds
+            //  检查对象不为空
             if (!target.length) index = 0;
             if (index < 0) index = li.length - 1;
             target = li.eq(index);
@@ -179,11 +179,12 @@
                 obj = {height: target.outerHeight()};
 
             if (!ul.queue('fx').length) {
-                //  Handle those pesky dots
+                //  添加当前样式
                 el.find('.dot').eq(index).addClass('active').siblings().removeClass('active');
-
+                //执行slider切换动画
                 el.animate(obj, speed, easing) && ul.animate($.extend({left: '-' + index + '00%'}, obj), speed, easing, function(data) {
                     _.i = index;
+                    //执行完成回调函数
                     $.isFunction(o.complete) && !callback && o.complete(el, target);
                 });
             };
@@ -236,14 +237,13 @@
     $.fn.unslider = function(o) {
         var len = this.length;
 
-        //  Enable multiple-slider support
+        //多对象的支持
         return this.each(function(index) {
-            //  Cache a copy of $(this), so it
+            //创建实例
             var me = $(this),
                 key = 'unslider' + (len > 1 ? '-' + ++index : ''),
                 instance = (new Unslider).init(me, o);
-
-            //  Invoke an Unslider instance
+            //缓存实例
             me.data(key, instance).data('key', key);
         });
     };
