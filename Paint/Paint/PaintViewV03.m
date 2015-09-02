@@ -375,6 +375,7 @@ typedef enum {
 }
 
 #pragma mark -控制面板按钮点击
+//贝塞尔按钮的点击事件
 -(void)berzierBtnClick:(id)sender{
     UIButton *btn = sender;
     if(paintViewMode == PaintViewModeStroke){
