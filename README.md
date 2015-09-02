@@ -13,7 +13,7 @@
 
 ios绘图demo,做一个涂鸦板(上)，文章地址：http://liuyanwei.jumppo.com/2015/07/26/ios-draw-Graffiti.html
 
-ios绘图demo,做一个涂鸦板(下)，文章地址：（未完成，增加了贝塞尔曲线的实现）
+ios绘图demo,做一个涂鸦板(下)，文章地址：http://liuyanwei.jumppo.com/2015/09/02/ios-draw-Graffiti-2.html
 
 #### BleDemo
 
