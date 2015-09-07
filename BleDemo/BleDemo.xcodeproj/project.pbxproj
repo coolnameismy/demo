@@ -14,6 +14,8 @@
 		F096EDAE1B7C73530015991B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F096EDAD1B7C73530015991B /* Images.xcassets */; };
 		F096EDB11B7C73530015991B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F096EDAF1B7C73530015991B /* LaunchScreen.xib */; };
 		F096EDBD1B7C73530015991B /* BleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F096EDBC1B7C73530015991B /* BleDemoTests.m */; };
+		F0F534E21B9DA47C00285A3C /* BeCentralVewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F534E11B9DA47C00285A3C /* BeCentralVewController.m */; };
+		F0F534E51B9DA5D400285A3C /* BePeripheralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F534E41B9DA5D400285A3C /* BePeripheralViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		F096EDB61B7C73530015991B /* BleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F096EDBB1B7C73530015991B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F096EDBC1B7C73530015991B /* BleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BleDemoTests.m; sourceTree = "<group>"; };
+		F0F534E01B9DA47C00285A3C /* BeCentralVewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeCentralVewController.h; sourceTree = "<group>"; };
+		F0F534E11B9DA47C00285A3C /* BeCentralVewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeCentralVewController.m; sourceTree = "<group>"; };
+		F0F534E31B9DA5D400285A3C /* BePeripheralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BePeripheralViewController.h; sourceTree = "<group>"; };
+		F0F534E41B9DA5D400285A3C /* BePeripheralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BePeripheralViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				F096EDA51B7C73530015991B /* AppDelegate.m */,
 				F096EDA71B7C73530015991B /* ViewController.h */,
 				F096EDA81B7C73530015991B /* ViewController.m */,
+				F0F534E01B9DA47C00285A3C /* BeCentralVewController.h */,
+				F0F534E11B9DA47C00285A3C /* BeCentralVewController.m */,
+				F0F534E31B9DA5D400285A3C /* BePeripheralViewController.h */,
+				F0F534E41B9DA5D400285A3C /* BePeripheralViewController.m */,
 				F096EDAA1B7C73530015991B /* Main.storyboard */,
 				F096EDAD1B7C73530015991B /* Images.xcassets */,
 				F096EDAF1B7C73530015991B /* LaunchScreen.xib */,
@@ -168,6 +178,7 @@
 				TargetAttributes = {
 					F096ED9C1B7C73530015991B = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = UKL2B4M8T2;
 					};
 					F096EDB51B7C73530015991B = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -219,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F534E21B9DA47C00285A3C /* BeCentralVewController.m in Sources */,
 				F096EDA91B7C73530015991B /* ViewController.m in Sources */,
+				F0F534E51B9DA5D400285A3C /* BePeripheralViewController.m in Sources */,
 				F096EDA61B7C73530015991B /* AppDelegate.m in Sources */,
 				F096EDA31B7C73530015991B /* main.m in Sources */,
 			);
@@ -347,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BleDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -358,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BleDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
