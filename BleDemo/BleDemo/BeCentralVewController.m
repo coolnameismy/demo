@@ -13,6 +13,7 @@
 @interface BeCentralVewController (){
     //系统蓝牙设备管理对象，可以把他理解为主设备，通过他，可以去扫描和链接外设
     CBCentralManager *manager;
+    UILabel *info;
 }
 
 @end
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     /*
      设置主设备的委托,CBCentralManagerDelegate
      必须实现的：
@@ -34,7 +36,12 @@
     
     //初始化并设置委托和线程队列，最好一个线程的参数可以为nil，默认会就main线程
     manager = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
-    
+    //页面样式
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    info = [[UILabel alloc]initWithFrame:self.view.frame];
+    [info setText:@"正在执行程序，请观察NSLog信息"];
+    [info setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:info];
     
 }
 
@@ -77,7 +84,8 @@
     
     NSLog(@"当扫描到设备:%@",peripheral.name);
     //接下连接我们的测试设备，如果你没有设备，可以下载一个app叫lightbule的app去模拟一个设备
-    if ([peripheral.name hasPrefix:@"MI"]){
+    //这里自己去设置下连接规则，我设置的是P开头的设备
+    if ([peripheral.name hasPrefix:@"P"]){
         /*
          一个主设备最多能连7个外设，每个外设最多只能给一个主设备连接,连接成功，失败，断开会进入各自的委托
          - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral;//连接外设成功的委托
