@@ -85,6 +85,8 @@ static NSString * const LocalNameKey =  @"myPeripheral";
     
     //service1初始化并加入两个characteristics
     CBMutableService *service1 = [[CBMutableService alloc]initWithType:[CBUUID UUIDWithString:ServiceUUID1] primary:YES];
+    NSLog(@"%@",service1.UUID);
+    
     [service1 setCharacteristics:@[notiyCharacteristic,readwriteCharacteristic]];
     
     //service2初始化并加入一个characteristics
