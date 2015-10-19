@@ -1,0 +1,32 @@
+body{
+	background-color: gray;
+}
+h1 {
+  color: wheat;
+  font-family: cursive;
+  text-align: center;
+  font-size: 49px;
+}
+.info{
+	color: aquamarine;
+	margin: 30px;
+
+}
+
+.btns{
+	border: 1px solid white;
+	padding: 30px;
+}
+.btns a{
+	width: 80%;
+	background: black;
+	height: 40px;
+	border: 0px;
+	border-radius: 6px;
+	color: white;
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+	padding-top: 25px;;
+
+}
