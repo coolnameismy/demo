@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F015C6D61BD723DC0048DD3E /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D21BD723DC0048DD3E /* base.css */; settings = {ASSET_TAGS = (); }; };
+		F015C6D71BD723DC0048DD3E /* common.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D31BD723DC0048DD3E /* common.js */; settings = {ASSET_TAGS = (); }; };
+		F015C6D81BD723DC0048DD3E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D41BD723DC0048DD3E /* index.html */; settings = {ASSET_TAGS = (); }; };
+		F015C6D91BD723DC0048DD3E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D51BD723DC0048DD3E /* jquery.js */; settings = {ASSET_TAGS = (); }; };
 		F0FF20221BD47D7F0070D46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF20211BD47D7F0070D46F /* AppDelegate.swift */; };
 		F0FF20241BD47D7F0070D46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF20231BD47D7F0070D46F /* ViewController.swift */; };
 		F0FF20271BD47D7F0070D46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FF20251BD47D7F0070D46F /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F015C6D21BD723DC0048DD3E /* base.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = base.css; sourceTree = "<group>"; };
+		F015C6D31BD723DC0048DD3E /* common.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = common.js; sourceTree = "<group>"; };
+		F015C6D41BD723DC0048DD3E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		F015C6D51BD723DC0048DD3E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 		F0FF201E1BD47D7F0070D46F /* WKWebVIew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebVIew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FF20211BD47D7F0070D46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FF20231BD47D7F0070D46F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,9 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F015C6D11BD723DC0048DD3E /* web */ = {
+			isa = PBXGroup;
+			children = (
+				F015C6D21BD723DC0048DD3E /* base.css */,
+				F015C6D31BD723DC0048DD3E /* common.js */,
+				F015C6D41BD723DC0048DD3E /* index.html */,
+				F015C6D51BD723DC0048DD3E /* jquery.js */,
+			);
+			name = web;
+			path = WKWebVIew/web;
+			sourceTree = "<group>";
+		};
 		F0FF20151BD47D7F0070D46F = {
 			isa = PBXGroup;
 			children = (
+				F015C6D11BD723DC0048DD3E /* web */,
 				F0FF20201BD47D7F0070D46F /* WKWebVIew */,
 				F0FF201F1BD47D7F0070D46F /* Products */,
 			);
@@ -123,7 +144,11 @@
 			files = (
 				F0FF202C1BD47D7F0070D46F /* LaunchScreen.storyboard in Resources */,
 				F0FF20291BD47D7F0070D46F /* Assets.xcassets in Resources */,
+				F015C6D61BD723DC0048DD3E /* base.css in Resources */,
+				F015C6D81BD723DC0048DD3E /* index.html in Resources */,
 				F0FF20271BD47D7F0070D46F /* Main.storyboard in Resources */,
+				F015C6D91BD723DC0048DD3E /* jquery.js in Resources */,
+				F015C6D71BD723DC0048DD3E /* common.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +310,7 @@
 				F0FF20321BD47D7F0070D46F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
