@@ -11,6 +11,7 @@
 		F015C6D71BD723DC0048DD3E /* common.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D31BD723DC0048DD3E /* common.js */; settings = {ASSET_TAGS = (); }; };
 		F015C6D81BD723DC0048DD3E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D41BD723DC0048DD3E /* index.html */; settings = {ASSET_TAGS = (); }; };
 		F015C6D91BD723DC0048DD3E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6D51BD723DC0048DD3E /* jquery.js */; settings = {ASSET_TAGS = (); }; };
+		F015C6DB1BD72A4C0048DD3E /* View1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015C6DA1BD72A4C0048DD3E /* View1Controller.swift */; settings = {ASSET_TAGS = (); }; };
 		F0FF20221BD47D7F0070D46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF20211BD47D7F0070D46F /* AppDelegate.swift */; };
 		F0FF20241BD47D7F0070D46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF20231BD47D7F0070D46F /* ViewController.swift */; };
 		F0FF20271BD47D7F0070D46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FF20251BD47D7F0070D46F /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		F015C6D31BD723DC0048DD3E /* common.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = common.js; sourceTree = "<group>"; };
 		F015C6D41BD723DC0048DD3E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		F015C6D51BD723DC0048DD3E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		F015C6DA1BD72A4C0048DD3E /* View1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1Controller.swift; sourceTree = "<group>"; };
 		F0FF201E1BD47D7F0070D46F /* WKWebVIew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebVIew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FF20211BD47D7F0070D46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FF20231BD47D7F0070D46F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				F0FF20211BD47D7F0070D46F /* AppDelegate.swift */,
 				F0FF20231BD47D7F0070D46F /* ViewController.swift */,
+				F015C6DA1BD72A4C0048DD3E /* View1Controller.swift */,
 				F0FF20251BD47D7F0070D46F /* Main.storyboard */,
 				F0FF20281BD47D7F0070D46F /* Assets.xcassets */,
 				F0FF202A1BD47D7F0070D46F /* LaunchScreen.storyboard */,
@@ -116,6 +119,7 @@
 				TargetAttributes = {
 					F0FF201D1BD47D7F0070D46F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 9V9UW57Z55;
 					};
 				};
 			};
@@ -161,6 +165,7 @@
 			files = (
 				F0FF20241BD47D7F0070D46F /* ViewController.swift in Sources */,
 				F0FF20221BD47D7F0070D46F /* AppDelegate.swift in Sources */,
+				F015C6DB1BD72A4C0048DD3E /* View1Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +276,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WKWebVIew/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.id4test.liu.WKWebVIew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.demo.WKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -283,10 +289,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WKWebVIew/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.id4test.liu.WKWebVIew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.demo.WKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

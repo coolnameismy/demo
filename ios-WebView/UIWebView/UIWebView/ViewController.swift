@@ -39,11 +39,8 @@ class ViewController: UIViewController,UIWebViewDelegate {
 //        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
 //        NSString *jsString = [[NSString alloc] initWithContentsOfFile:filePath];
 //        [webView stringByEvaluatingJavaScriptFromString:jsString];
-        
-        webView.loadRequest(NSURLRequest(URL: NSURL.fileURLWithPath(path)))
-        
-        
-        
+//        webView.loadRequest(NSURLRequest(URL: NSURL.fileURLWithPath(path)))
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.bing.com")!))
     }
 
     func btnClick(sender:UIButton){
