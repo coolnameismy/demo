@@ -8,8 +8,9 @@ var showInfo = function(msg){
 	$(".info").html(msg);
 }
 
-var hello = function(){
-	alert("hello")
+var hi = function(){
+    alert("hi")
+    $(".info").html("hi");
 }
 
 var hello = function(msg){
@@ -17,7 +18,9 @@ var hello = function(msg){
 	if(msg.obj != undefined)
 		alert(msg.obj)
 }
-
+var getName = function(){
+    return "liuyanwei"
+}
 
 var btnsInit = function(){
 	var btns = ["js-btn:调用自身js的hello方法","js-btn:调用ios的hello方法","js-btn:调用ios的hello(msg)方法"]

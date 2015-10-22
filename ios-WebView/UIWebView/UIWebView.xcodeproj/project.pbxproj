@@ -16,6 +16,7 @@
 		E13AD5561BD5407100D61C84 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5511BD5407100D61C84 /* index.html */; settings = {ASSET_TAGS = (); }; };
 		E13AD5571BD5407100D61C84 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5521BD5407100D61C84 /* jquery.js */; settings = {ASSET_TAGS = (); }; };
 		E13AD5591BD5409200D61C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AD5581BD5409200D61C84 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F015C6DD1BD871250048DD3E /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6DC1BD871250048DD3E /* test.js */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E13AD5511BD5407100D61C84 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		E13AD5521BD5407100D61C84 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
 		E13AD5581BD5409200D61C84 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F015C6DC1BD871250048DD3E /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		E13AD54E1BD5407100D61C84 /* web */ = {
 			isa = PBXGroup;
 			children = (
+				F015C6DC1BD871250048DD3E /* test.js */,
 				E13AD54F1BD5407100D61C84 /* base.css */,
 				E13AD5501BD5407100D61C84 /* common.js */,
 				E13AD5511BD5407100D61C84 /* index.html */,
@@ -144,6 +147,7 @@
 			files = (
 				E13AD5461BD5405400D61C84 /* LaunchScreen.storyboard in Resources */,
 				E13AD5431BD5405400D61C84 /* Assets.xcassets in Resources */,
+				F015C6DD1BD871250048DD3E /* test.js in Resources */,
 				E13AD5541BD5407100D61C84 /* base.css in Resources */,
 				E13AD5561BD5407100D61C84 /* index.html in Resources */,
 				E13AD5411BD5405400D61C84 /* Main.storyboard in Resources */,

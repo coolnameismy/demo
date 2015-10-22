@@ -13,7 +13,7 @@ var showInfo = function(msg){
 }
 
 var hi = function(){
-	alert("hello")
+	alert("hi")
 
 	$(".info").html("hi");
 }
@@ -30,7 +30,7 @@ var getName = function(){
 
 
 var btnsInit = function(){
-	var btns = ["js-btn:调用自身js的hello方法","js-btn:调用ios的hello方法","js-btn:调用ios的hello(msg)方法"]
+	var btns = ["js-btn:调用自身js的hi方法","js-btn:调用ios的hello方法"]
 	$.each(btns,function(i,item){
 		var btnHtml = "<a>" + item+"</a>"
 		$(".btns").append(btnHtml)
@@ -39,18 +39,16 @@ var btnsInit = function(){
 		var btnText = $(this).html()
 		showInfo("你点击了："+btnText)
 		if (btnText ==btns[0]) {
-			hello()
+			hi()
 		}
 		if (btnText ==btns[1]) {
 			var message = { 
 							'method' : 'hello',
 							'param1' : 'liuyanwei',
 					    	};
-            window.webkit.messageHandlers.hello.postMessage(message);
+            window.webkit.messageHandlers.webViewApp.postMessage(message);
 		}
-		if (btnText ==btns[2]) {
-			document.location = "hello://hello_liuyanwei";
-		}
+		
 	})	
 
 	showInfo("html加载完成")
