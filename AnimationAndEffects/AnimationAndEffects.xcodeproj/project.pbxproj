@@ -13,6 +13,7 @@
 		F07B09E81BDF141800FB31EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07B09E71BDF141800FB31EA /* Assets.xcassets */; };
 		F07B09EB1BDF141800FB31EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07B09E91BDF141800FB31EA /* LaunchScreen.storyboard */; };
 		F07B09F31BDF158000FB31EA /* QuickExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09F21BDF158000FB31EA /* QuickExampleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F07B09F51BDF59B700FB31EA /* BasicAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09F41BDF59B700FB31EA /* BasicAnimationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F07B09EA1BDF141800FB31EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F07B09EC1BDF141800FB31EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F07B09F21BDF158000FB31EA /* QuickExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickExampleViewController.swift; sourceTree = "<group>"; };
+		F07B09F41BDF59B700FB31EA /* BasicAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F07B09E91BDF141800FB31EA /* LaunchScreen.storyboard */,
 				F07B09EC1BDF141800FB31EA /* Info.plist */,
 				F07B09F21BDF158000FB31EA /* QuickExampleViewController.swift */,
+				F07B09F41BDF59B700FB31EA /* BasicAnimationViewController.swift */,
 			);
 			path = AnimationAndEffects;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */,
 				F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */,
+				F07B09F51BDF59B700FB31EA /* BasicAnimationViewController.swift in Sources */,
 				F07B09F31BDF158000FB31EA /* QuickExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

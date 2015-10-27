@@ -40,6 +40,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="33" y="173" width="163" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="kqr-W1-1TQ" kind="show" id="QL2-eQ-Ru4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cA-I2-pWZ">
                                 <rect key="frame" x="33" y="103" width="78" height="30"/>
@@ -91,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="726" y="66"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic Animation View Controller-->
         <scene sceneID="Mc0-eN-mGU">
             <objects>
-                <viewController id="kqr-W1-1TQ" sceneMemberID="viewController">
+                <viewController id="kqr-W1-1TQ" customClass="BasicAnimationViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sr6-08-ug2"/>
                         <viewControllerLayoutGuide type="bottom" id="VwI-Gv-fzJ"/>
