@@ -20,7 +20,7 @@
                                 <rect key="frame" x="33" y="103" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="QuickExampleViewController">
+                                <state key="normal" title="QuickExample">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -54,6 +54,23 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="33" y="235" width="163" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="kog-C8-dRW" kind="show" id="UC8-hv-5bg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ST-oL-YpL">
+                                <rect key="frame" x="33" y="103" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="转场效果">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="296" width="163" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="B50-Ke-Oab" kind="show" id="u8B-tF-HfO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -61,12 +78,14 @@
                             <mask key="subviews">
                                 <exclude reference="IAO-IA-h79"/>
                                 <exclude reference="7cA-I2-pWZ"/>
+                                <exclude reference="6ST-oL-YpL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="IAO-IA-h79"/>
                                 <include reference="7cA-I2-pWZ"/>
+                                <include reference="6ST-oL-YpL"/>
                             </mask>
                         </variation>
                     </view>
@@ -74,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="357.75"/>
+            <point key="canvasLocation" x="-654" y="825.75"/>
         </scene>
         <!--Quick Example View Controller-->
         <scene sceneID="ND6-tb-dax">
@@ -112,10 +131,27 @@
             </objects>
             <point key="canvasLocation" x="724" y="745"/>
         </scene>
-        <!--View Controller-->
+        <!--Transfer Animation View Controller-->
+        <scene sceneID="Bib-wl-7Ym">
+            <objects>
+                <viewController id="B50-Ke-Oab" customClass="TransferAnimationViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yoZ-Cl-Ktf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xdk-kr-cG7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nyt-YD-Fha">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7PK-Vx-7Q6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.5" y="1609.5"/>
+        </scene>
+        <!--Key Frame Animation View Controller-->
         <scene sceneID="yXd-N4-aMp">
             <objects>
-                <viewController id="kog-C8-dRW" sceneMemberID="viewController">
+                <viewController id="kog-C8-dRW" customClass="KeyFrameAnimationViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IZU-SZ-Zo8"/>
                         <viewControllerLayoutGuide type="bottom" id="k3q-su-c2x"/>
@@ -128,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7Z-3Y-Tha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="1443"/>
+            <point key="canvasLocation" x="723" y="1437.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3gt-Yi-NMD">
@@ -144,7 +180,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJD-rB-uJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-786" y="644"/>
+            <point key="canvasLocation" x="-1572" y="811.5"/>
         </scene>
     </scenes>
 </document>

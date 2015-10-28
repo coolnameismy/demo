@@ -39,9 +39,17 @@ class BasicAnimationViewController: UIViewController {
         /*
         可选的KeyPath
         transform.scale = 比例轉換
-        transform.scale.x = 闊的比例轉換
-        transform.scale.y = 高的比例轉換
-        transform.rotation.z = 平面圖的旋轉
+        transform.scale.x
+        transform.scale.y
+        transform.rotation = 旋轉
+        transform.rotation.x
+        transform.rotation.y
+        transform.rotation.z
+        transform.translation
+        transform.translation.x
+        transform.translation.y
+        transform.translation.z
+        
         opacity = 透明度
         margin
         zPosition
@@ -62,6 +70,7 @@ class BasicAnimationViewController: UIViewController {
         shadowOffset
         shadowOpacity
         shadowRadius
+        
         */
         let baseAnimation = CABasicAnimation(keyPath: "position")
         //baseAnimation.fromValue 初始位置，如果不设就是当前位置
@@ -72,6 +81,8 @@ class BasicAnimationViewController: UIViewController {
         baseAnimation.duration = 0.2
         baseAnimation.repeatCount = 1
         baseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)//加速运动
+        //baseAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, 0, 0.9, 0.7)//自定义加速的曲线参数
+        
         //这两个属性若不设置，动画执行后回复位
         baseAnimation.removedOnCompletion = false
         baseAnimation.fillMode = kCAFillModeForwards
@@ -136,12 +147,14 @@ class BasicAnimationViewController: UIViewController {
     override func animationDidStop(anim:CAAnimation, finished flag: Bool) {
         let endPoint = anim.valueForKey("endPoint")?.CGPointValue
         let theView = anim.valueForKey("sender") as! UIView
-        theView.center = endPoint!
+//        theView.center = endPoint!
+        theView.layer.position = endPoint!
+        
+//        let infoView = UIView(frame: theView.layer.frame)
+//        infoView.backgroundColor = UIColor.greenColor()
+//        view.addSubview(infoView)
     }
     
-    //缩放
-    
-    //http://blog.csdn.net/iosevanhuang/article/details/14488239 http://www.cocoachina.com/ios/20141022/10005.html
 
 
   
