@@ -72,6 +72,20 @@
                                     <segue destination="B50-Ke-Oab" kind="show" id="u8B-tF-HfO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zm-WL-BEP">
+                                <rect key="frame" x="33" y="103" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="UIKit 力学效果">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="353" width="163" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="TEU-D6-F06" kind="show" id="mN5-yN-0tI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -79,6 +93,7 @@
                                 <exclude reference="IAO-IA-h79"/>
                                 <exclude reference="7cA-I2-pWZ"/>
                                 <exclude reference="6ST-oL-YpL"/>
+                                <exclude reference="0zm-WL-BEP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -86,6 +101,7 @@
                                 <include reference="IAO-IA-h79"/>
                                 <include reference="7cA-I2-pWZ"/>
                                 <include reference="6ST-oL-YpL"/>
+                                <include reference="0zm-WL-BEP"/>
                             </mask>
                         </variation>
                     </view>
@@ -111,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfq-TC-pTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="66"/>
+            <point key="canvasLocation" x="-816" y="-87"/>
         </scene>
         <!--Basic Animation View Controller-->
         <scene sceneID="Mc0-eN-mGU">
@@ -129,7 +145,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXR-DE-fYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="745"/>
+            <point key="canvasLocation" x="-75" y="-83.25"/>
+        </scene>
+        <!--UIKit动力行为-->
+        <scene sceneID="OBK-N1-gC6">
+            <objects>
+                <viewController id="TEU-D6-F06" customClass="UIKitDynamicsViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yGk-0f-yXS"/>
+                        <viewControllerLayoutGuide type="bottom" id="saS-VN-Iqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tSN-3z-x4x">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UIKit动力行为" id="FIX-qg-6gS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Uh9-o7-zd5">
+                            <connections>
+                                <action selector="Refersh:" destination="TEU-D6-F06" id="JeX-9j-BDw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IzO-mu-e2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="616.5"/>
         </scene>
         <!--Transfer Animation View Controller-->
         <scene sceneID="Bib-wl-7Ym">
@@ -146,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PK-Vx-7Q6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310.5" y="1609.5"/>
+            <point key="canvasLocation" x="1489.5" y="-58.5"/>
         </scene>
         <!--Key Frame Animation View Controller-->
         <scene sceneID="yXd-N4-aMp">
@@ -164,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7Z-3Y-Tha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723" y="1437.75"/>
+            <point key="canvasLocation" x="681" y="-83.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3gt-Yi-NMD">

@@ -23,6 +23,16 @@
 		F07B0A061BE0B62A00FB31EA /* x4.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A021BE0B62A00FB31EA /* x4.png */; settings = {ASSET_TAGS = (); }; };
 		F07B0A071BE0B62A00FB31EA /* x5.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A031BE0B62A00FB31EA /* x5.png */; settings = {ASSET_TAGS = (); }; };
 		F07B0A081BE0B62A00FB31EA /* x0.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A041BE0B62A00FB31EA /* x0.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A0A1BE1AEE200FB31EA /* Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A091BE1AEE200FB31EA /* Arrow@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A0C1BE1AEEF00FB31EA /* BackgroundTile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A0B1BE1AEEF00FB31EA /* BackgroundTile@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A0E1BE1AEFE00FB31EA /* Box1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A0D1BE1AEFE00FB31EA /* Box1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A101BE1AF0800FB31EA /* Box2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A0F1BE1AF0800FB31EA /* Box2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A121BE1AF1200FB31EA /* ButtonOutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A111BE1AF1200FB31EA /* ButtonOutline@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A161BE1AF3400FB31EA /* Origin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A151BE1AF3400FB31EA /* Origin@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A181BE1AF5100FB31EA /* Floor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A171BE1AF5100FB31EA /* Floor@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A1A1BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F07B0A1C1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A1B1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F07B0A1E1BE2137E00FB31EA /* blackhole.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A1D1BE2137E00FB31EA /* blackhole.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,16 @@
 		F07B0A021BE0B62A00FB31EA /* x4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x4.png; sourceTree = "<group>"; };
 		F07B0A031BE0B62A00FB31EA /* x5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x5.png; sourceTree = "<group>"; };
 		F07B0A041BE0B62A00FB31EA /* x0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x0.png; sourceTree = "<group>"; };
+		F07B0A091BE1AEE200FB31EA /* Arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow@2x.png"; sourceTree = "<group>"; };
+		F07B0A0B1BE1AEEF00FB31EA /* BackgroundTile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTile@2x.png"; sourceTree = "<group>"; };
+		F07B0A0D1BE1AEFE00FB31EA /* Box1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box1@2x.png"; sourceTree = "<group>"; };
+		F07B0A0F1BE1AF0800FB31EA /* Box2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box2@2x.png"; sourceTree = "<group>"; };
+		F07B0A111BE1AF1200FB31EA /* ButtonOutline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonOutline@2x.png"; sourceTree = "<group>"; };
+		F07B0A151BE1AF3400FB31EA /* Origin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Origin@2x.png"; sourceTree = "<group>"; };
+		F07B0A171BE1AF5100FB31EA /* Floor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Floor@2x.png"; sourceTree = "<group>"; };
+		F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitDynamicsViewController.swift; sourceTree = "<group>"; };
+		F07B0A1B1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AttachmentPoint_Mask@2x.png"; sourceTree = "<group>"; };
+		F07B0A1D1BE2137E00FB31EA /* blackhole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackhole.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +106,7 @@
 				F07B09F41BDF59B700FB31EA /* BasicAnimationViewController.swift */,
 				F07B09F91BE06C6400FB31EA /* KeyFrameAnimationViewController.swift */,
 				F07B09FF1BE0A6CD00FB31EA /* TransferAnimationViewController.swift */,
+				F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */,
 				F07B09F61BE06BCC00FB31EA /* images */,
 			);
 			path = AnimationAndEffects;
@@ -94,6 +115,14 @@
 		F07B09F61BE06BCC00FB31EA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F07B0A1D1BE2137E00FB31EA /* blackhole.png */,
+				F07B0A1B1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png */,
+				F07B0A171BE1AF5100FB31EA /* Floor@2x.png */,
+				F07B0A111BE1AF1200FB31EA /* ButtonOutline@2x.png */,
+				F07B0A0D1BE1AEFE00FB31EA /* Box1@2x.png */,
+				F07B0A0F1BE1AF0800FB31EA /* Box2@2x.png */,
+				F07B0A0B1BE1AEEF00FB31EA /* BackgroundTile@2x.png */,
+				F07B0A091BE1AEE200FB31EA /* Arrow@2x.png */,
 				F07B0A011BE0B62A00FB31EA /* x3.png */,
 				F07B0A021BE0B62A00FB31EA /* x4.png */,
 				F07B0A031BE0B62A00FB31EA /* x5.png */,
@@ -101,6 +130,7 @@
 				F07B09FB1BE0A62700FB31EA /* x1.png */,
 				F07B09FC1BE0A62700FB31EA /* x2.png */,
 				F07B09F71BE06BCC00FB31EA /* githubhead1.jpeg */,
+				F07B0A151BE1AF3400FB31EA /* Origin@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -162,14 +192,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07B0A0C1BE1AEEF00FB31EA /* BackgroundTile@2x.png in Resources */,
+				F07B0A0E1BE1AEFE00FB31EA /* Box1@2x.png in Resources */,
 				F07B09FD1BE0A62700FB31EA /* x1.png in Resources */,
 				F07B09EB1BDF141800FB31EA /* LaunchScreen.storyboard in Resources */,
+				F07B0A181BE1AF5100FB31EA /* Floor@2x.png in Resources */,
 				F07B09E81BDF141800FB31EA /* Assets.xcassets in Resources */,
+				F07B0A1E1BE2137E00FB31EA /* blackhole.png in Resources */,
 				F07B09F81BE06BCC00FB31EA /* githubhead1.jpeg in Resources */,
+				F07B0A0A1BE1AEE200FB31EA /* Arrow@2x.png in Resources */,
 				F07B09E61BDF141800FB31EA /* Main.storyboard in Resources */,
 				F07B0A081BE0B62A00FB31EA /* x0.png in Resources */,
 				F07B0A071BE0B62A00FB31EA /* x5.png in Resources */,
+				F07B0A161BE1AF3400FB31EA /* Origin@2x.png in Resources */,
+				F07B0A121BE1AF1200FB31EA /* ButtonOutline@2x.png in Resources */,
 				F07B0A061BE0B62A00FB31EA /* x4.png in Resources */,
+				F07B0A1C1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png in Resources */,
+				F07B0A101BE1AF0800FB31EA /* Box2@2x.png in Resources */,
 				F07B0A051BE0B62A00FB31EA /* x3.png in Resources */,
 				F07B09FE1BE0A62700FB31EA /* x2.png in Resources */,
 			);
@@ -182,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07B0A1A1BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift in Sources */,
 				F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */,
 				F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */,
 				F07B0A001BE0A6CD00FB31EA /* TransferAnimationViewController.swift in Sources */,
