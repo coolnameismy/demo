@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1BE749F1BE4FECC004CCFBA /* MotionEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09E01BDF141800FB31EA /* AppDelegate.swift */; };
 		F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09E21BDF141800FB31EA /* ViewController.swift */; };
 		F07B09E61BDF141800FB31EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07B09E41BDF141800FB31EA /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionEffectsViewController.swift; sourceTree = "<group>"; };
 		F07B09DD1BDF141800FB31EA /* AnimationAndEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationAndEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07B09E01BDF141800FB31EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F07B09E21BDF141800FB31EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				F07B09F91BE06C6400FB31EA /* KeyFrameAnimationViewController.swift */,
 				F07B09FF1BE0A6CD00FB31EA /* TransferAnimationViewController.swift */,
 				F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */,
+				E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */,
 				F07B09F61BE06BCC00FB31EA /* images */,
 			);
 			path = AnimationAndEffects;
@@ -224,6 +227,7 @@
 				F07B0A1A1BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift in Sources */,
 				F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */,
 				F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */,
+				E1BE749F1BE4FECC004CCFBA /* MotionEffectsViewController.swift in Sources */,
 				F07B0A001BE0A6CD00FB31EA /* TransferAnimationViewController.swift in Sources */,
 				F07B09F51BDF59B700FB31EA /* BasicAnimationViewController.swift in Sources */,
 				F07B09F31BDF158000FB31EA /* QuickExampleViewController.swift in Sources */,
