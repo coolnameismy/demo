@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E1BE749F1BE4FECC004CCFBA /* MotionEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E1BE74A91BE4FFFE004CCFBA /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A11BE4FFFE004CCFBA /* bg.jpeg */; settings = {ASSET_TAGS = (); }; };
+		E1BE74AA1BE4FFFE004CCFBA /* octocat-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A21BE4FFFE004CCFBA /* octocat-shadow.png */; settings = {ASSET_TAGS = (); }; };
+		E1BE74AB1BE4FFFE004CCFBA /* octocat.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A31BE4FFFE004CCFBA /* octocat.png */; settings = {ASSET_TAGS = (); }; };
+		E1BE74AC1BE4FFFE004CCFBA /* ship-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A41BE4FFFE004CCFBA /* ship-shadow.png */; settings = {ASSET_TAGS = (); }; };
+		E1BE74AD1BE4FFFE004CCFBA /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A51BE4FFFE004CCFBA /* ship.png */; settings = {ASSET_TAGS = (); }; };
+		E1BE74AE1BE4FFFE004CCFBA /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A61BE4FFFE004CCFBA /* text.png */; settings = {ASSET_TAGS = (); }; };
+		E1BE74AF1BE4FFFE004CCFBA /* yurt1.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A71BE4FFFE004CCFBA /* yurt1.png */; settings = {ASSET_TAGS = (); }; };
+		E1BE74B01BE4FFFE004CCFBA /* yurt2.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A81BE4FFFE004CCFBA /* yurt2.png */; settings = {ASSET_TAGS = (); }; };
 		F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09E01BDF141800FB31EA /* AppDelegate.swift */; };
 		F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09E21BDF141800FB31EA /* ViewController.swift */; };
 		F07B09E61BDF141800FB31EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07B09E41BDF141800FB31EA /* Main.storyboard */; };
@@ -38,6 +46,14 @@
 
 /* Begin PBXFileReference section */
 		E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionEffectsViewController.swift; sourceTree = "<group>"; };
+		E1BE74A11BE4FFFE004CCFBA /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
+		E1BE74A21BE4FFFE004CCFBA /* octocat-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octocat-shadow.png"; sourceTree = "<group>"; };
+		E1BE74A31BE4FFFE004CCFBA /* octocat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octocat.png; sourceTree = "<group>"; };
+		E1BE74A41BE4FFFE004CCFBA /* ship-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ship-shadow.png"; sourceTree = "<group>"; };
+		E1BE74A51BE4FFFE004CCFBA /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
+		E1BE74A61BE4FFFE004CCFBA /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
+		E1BE74A71BE4FFFE004CCFBA /* yurt1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurt1.png; sourceTree = "<group>"; };
+		E1BE74A81BE4FFFE004CCFBA /* yurt2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurt2.png; sourceTree = "<group>"; };
 		F07B09DD1BDF141800FB31EA /* AnimationAndEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationAndEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07B09E01BDF141800FB31EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F07B09E21BDF141800FB31EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +95,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1BE74A01BE4FFFE004CCFBA /* github404 */ = {
+			isa = PBXGroup;
+			children = (
+				E1BE74A11BE4FFFE004CCFBA /* bg.jpeg */,
+				E1BE74A21BE4FFFE004CCFBA /* octocat-shadow.png */,
+				E1BE74A31BE4FFFE004CCFBA /* octocat.png */,
+				E1BE74A41BE4FFFE004CCFBA /* ship-shadow.png */,
+				E1BE74A51BE4FFFE004CCFBA /* ship.png */,
+				E1BE74A61BE4FFFE004CCFBA /* text.png */,
+				E1BE74A71BE4FFFE004CCFBA /* yurt1.png */,
+				E1BE74A81BE4FFFE004CCFBA /* yurt2.png */,
+			);
+			path = github404;
+			sourceTree = "<group>";
+		};
 		F07B09D41BDF141800FB31EA = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +149,7 @@
 		F07B09F61BE06BCC00FB31EA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E1BE74A01BE4FFFE004CCFBA /* github404 */,
 				F07B0A1D1BE2137E00FB31EA /* blackhole.png */,
 				F07B0A1B1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png */,
 				F07B0A171BE1AF5100FB31EA /* Floor@2x.png */,
@@ -195,13 +227,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BE74A91BE4FFFE004CCFBA /* bg.jpeg in Resources */,
 				F07B0A0C1BE1AEEF00FB31EA /* BackgroundTile@2x.png in Resources */,
 				F07B0A0E1BE1AEFE00FB31EA /* Box1@2x.png in Resources */,
+				E1BE74AC1BE4FFFE004CCFBA /* ship-shadow.png in Resources */,
 				F07B09FD1BE0A62700FB31EA /* x1.png in Resources */,
 				F07B09EB1BDF141800FB31EA /* LaunchScreen.storyboard in Resources */,
 				F07B0A181BE1AF5100FB31EA /* Floor@2x.png in Resources */,
 				F07B09E81BDF141800FB31EA /* Assets.xcassets in Resources */,
 				F07B0A1E1BE2137E00FB31EA /* blackhole.png in Resources */,
+				E1BE74B01BE4FFFE004CCFBA /* yurt2.png in Resources */,
+				E1BE74AF1BE4FFFE004CCFBA /* yurt1.png in Resources */,
 				F07B09F81BE06BCC00FB31EA /* githubhead1.jpeg in Resources */,
 				F07B0A0A1BE1AEE200FB31EA /* Arrow@2x.png in Resources */,
 				F07B09E61BDF141800FB31EA /* Main.storyboard in Resources */,
@@ -209,11 +245,15 @@
 				F07B0A071BE0B62A00FB31EA /* x5.png in Resources */,
 				F07B0A161BE1AF3400FB31EA /* Origin@2x.png in Resources */,
 				F07B0A121BE1AF1200FB31EA /* ButtonOutline@2x.png in Resources */,
+				E1BE74AB1BE4FFFE004CCFBA /* octocat.png in Resources */,
 				F07B0A061BE0B62A00FB31EA /* x4.png in Resources */,
+				E1BE74AA1BE4FFFE004CCFBA /* octocat-shadow.png in Resources */,
 				F07B0A1C1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png in Resources */,
 				F07B0A101BE1AF0800FB31EA /* Box2@2x.png in Resources */,
+				E1BE74AE1BE4FFFE004CCFBA /* text.png in Resources */,
 				F07B0A051BE0B62A00FB31EA /* x3.png in Resources */,
 				F07B09FE1BE0A62700FB31EA /* x2.png in Resources */,
+				E1BE74AD1BE4FFFE004CCFBA /* ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
