@@ -29,4 +29,7 @@
 #### ios-WebView
 [UIWebView和WKWebView的使用及js交互](http://liuyanwei.jumppo.com/2015/10/17/ios-webView.html) 
 
-
+#### AnimationAndEffects
+-	[iOS动画和特效（一）iOS动画和特效（一）UIView动画和CoreAnimation](http://liuyanwei.jumppo.com/2015/10/30/iOS-Animation-UIViewAndCoreAnimation.html) 
+-	[iOS动画和特效（二）UIKit力学行为](http://liuyanwei.jumppo.com/2015/10/30/iOS-UIKit-Dynamics.html) 
+AnimationAndEffects/UIKitDynamicsViewController.swift 
