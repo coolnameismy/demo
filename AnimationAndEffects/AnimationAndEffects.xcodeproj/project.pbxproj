@@ -42,6 +42,11 @@
 		F07B0A1A1BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F07B0A1C1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A1B1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png */; settings = {ASSET_TAGS = (); }; };
 		F07B0A1E1BE2137E00FB31EA /* blackhole.png in Resources */ = {isa = PBXBuildFile; fileRef = F07B0A1D1BE2137E00FB31EA /* blackhole.png */; settings = {ASSET_TAGS = (); }; };
+		F0B884581BE701C0006D72DE /* ControllerTransitioningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B884571BE701C0006D72DE /* ControllerTransitioningViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F0B8845A1BE70458006D72DE /* To1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B884591BE70458006D72DE /* To1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F0B8845C1BE70B11006D72DE /* AnimatedTransitioning1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8845B1BE70B11006D72DE /* AnimatedTransitioning1.swift */; settings = {ASSET_TAGS = (); }; };
+		F0B8845E1BE74908006D72DE /* To2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8845D1BE74908006D72DE /* To2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F0B884601BE74EDE006D72DE /* AnimatedTransitioning2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8845F1BE74EDE006D72DE /* AnimatedTransitioning2.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +87,11 @@
 		F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitDynamicsViewController.swift; sourceTree = "<group>"; };
 		F07B0A1B1BE1FE5700FB31EA /* AttachmentPoint_Mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AttachmentPoint_Mask@2x.png"; sourceTree = "<group>"; };
 		F07B0A1D1BE2137E00FB31EA /* blackhole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackhole.png; sourceTree = "<group>"; };
+		F0B884571BE701C0006D72DE /* ControllerTransitioningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerTransitioningViewController.swift; sourceTree = "<group>"; };
+		F0B884591BE70458006D72DE /* To1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = To1ViewController.swift; sourceTree = "<group>"; };
+		F0B8845B1BE70B11006D72DE /* AnimatedTransitioning1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning1.swift; sourceTree = "<group>"; };
+		F0B8845D1BE74908006D72DE /* To2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = To2ViewController.swift; sourceTree = "<group>"; };
+		F0B8845F1BE74EDE006D72DE /* AnimatedTransitioning2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,7 @@
 				F07B09FF1BE0A6CD00FB31EA /* TransferAnimationViewController.swift */,
 				F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */,
 				E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */,
+				F0B884561BE70194006D72DE /* ControllerTransitioning */,
 				F07B09F61BE06BCC00FB31EA /* images */,
 			);
 			path = AnimationAndEffects;
@@ -168,6 +179,18 @@
 				F07B0A151BE1AF3400FB31EA /* Origin@2x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		F0B884561BE70194006D72DE /* ControllerTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				F0B884571BE701C0006D72DE /* ControllerTransitioningViewController.swift */,
+				F0B884591BE70458006D72DE /* To1ViewController.swift */,
+				F0B8845D1BE74908006D72DE /* To2ViewController.swift */,
+				F0B8845B1BE70B11006D72DE /* AnimatedTransitioning1.swift */,
+				F0B8845F1BE74EDE006D72DE /* AnimatedTransitioning2.swift */,
+			);
+			path = ControllerTransitioning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,14 +287,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B884581BE701C0006D72DE /* ControllerTransitioningViewController.swift in Sources */,
+				F0B884601BE74EDE006D72DE /* AnimatedTransitioning2.swift in Sources */,
 				F07B0A1A1BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift in Sources */,
 				F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */,
 				F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */,
 				E1BE749F1BE4FECC004CCFBA /* MotionEffectsViewController.swift in Sources */,
 				F07B0A001BE0A6CD00FB31EA /* TransferAnimationViewController.swift in Sources */,
+				F0B8845E1BE74908006D72DE /* To2ViewController.swift in Sources */,
 				F07B09F51BDF59B700FB31EA /* BasicAnimationViewController.swift in Sources */,
 				F07B09F31BDF158000FB31EA /* QuickExampleViewController.swift in Sources */,
 				F07B09FA1BE06C6400FB31EA /* KeyFrameAnimationViewController.swift in Sources */,
+				F0B8845C1BE70B11006D72DE /* AnimatedTransitioning1.swift in Sources */,
+				F0B8845A1BE70458006D72DE /* To1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
