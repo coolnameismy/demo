@@ -13,21 +13,24 @@ class ControllerTransitioningViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.whiteColor()
         
-        let originViw = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        originViw.backgroundColor = UIColor.purpleColor()
-        view.addSubview(originViw)
-        
-        let octocatView = UIImageView(image: UIImage(named: "octocat.png"))
-        octocatView.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
-        originViw.addSubview(octocatView)
-    
-        let masklayer = CALayer()
-        masklayer.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        masklayer.backgroundColor = UIColor.blackColor().CGColor
-        masklayer.contents = octocatView
-        originViw.layer.mask =  masklayer
-
+//        let octocatView = UIImageView(image: UIImage(named: "octocat.png"))
+//        octocatView.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
+//        view.addSubview(octocatView)
+//    
+//        let masklayer = CALayer()
+//        masklayer.frame = CGRect(x: view.center.x, y: view.center.y, width: 0, height: 0)
+//        masklayer.backgroundColor = UIColor.whiteColor().CGColor
+//        masklayer.contents = octocatView
+//        view.layer.mask =  masklayer
+//        //2秒钟自动关闭
+//        let t:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC))
+//        dispatch_after(t, dispatch_get_main_queue()) { () -> Void in
+//            UIView.animateWithDuration(1, animations: { () -> Void in
+//                masklayer.frame = self.view.frame
+//            })
+//        }
     }
     
     //推出视图切换效果
@@ -47,17 +50,22 @@ class ControllerTransitioningViewController: UIViewController{
     
 }
 
-extension ControllerTransitioningViewController:UIViewControllerTransitioningDelegate{
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        return AnimatedTransitioning1()
-    }
-}
-
+//推出视图切换效果
 extension ControllerTransitioningViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
         return AnimatedTransitioning2()
     }
 }
+
+
+//模态视图切换效果
+extension ControllerTransitioningViewController:UIViewControllerTransitioningDelegate{
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        return AnimatedTransitioning2()
+    }
+}
+
+
 
 
 

@@ -14,25 +14,12 @@ class To1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = UIColor.redColor()
       
-
-        let originViw = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        originViw.backgroundColor = UIColor.purpleColor()
-        view.addSubview(originViw)
-        
-        let octocatView = UIImageView(image: UIImage(named: "octocat.png"))
-        octocatView.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
-        originViw.addSubview(octocatView)
-        
-        let masklayer = CALayer()
-        masklayer.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        masklayer.backgroundColor = UIColor.blackColor().CGColor
-        masklayer.contents = octocatView
-        view.layer.mask =  masklayer
-        
+         
     }
 
-    
+        
 }
 
