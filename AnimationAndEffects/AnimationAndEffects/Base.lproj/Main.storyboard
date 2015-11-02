@@ -86,6 +86,20 @@
                                     <segue destination="TEU-D6-F06" kind="show" id="mN5-yN-0tI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHb-hE-JVo">
+                                <rect key="frame" x="33" y="103" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Motion Effects">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="413" width="163" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Yo8-Et-T5j" kind="show" id="3bz-D9-0tb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -94,6 +108,7 @@
                                 <exclude reference="7cA-I2-pWZ"/>
                                 <exclude reference="6ST-oL-YpL"/>
                                 <exclude reference="0zm-WL-BEP"/>
+                                <exclude reference="FHb-hE-JVo"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -102,6 +117,7 @@
                                 <include reference="7cA-I2-pWZ"/>
                                 <include reference="6ST-oL-YpL"/>
                                 <include reference="0zm-WL-BEP"/>
+                                <include reference="FHb-hE-JVo"/>
                             </mask>
                         </variation>
                     </view>
@@ -110,6 +126,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-654" y="825.75"/>
+        </scene>
+        <!--Motion Effects View Controller-->
+        <scene sceneID="100-EK-Sl4">
+            <objects>
+                <viewController id="Yo8-Et-T5j" customClass="MotionEffectsViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nb0-Yt-PsX"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpo-97-DBT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UfJ-2q-V7t">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMF-rE-rfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="1594.5"/>
         </scene>
         <!--Quick Example View Controller-->
         <scene sceneID="ND6-tb-dax">
@@ -156,6 +190,7 @@
                         <viewControllerLayoutGuide type="bottom" id="saS-VN-Iqa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tSN-3z-x4x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -181,6 +216,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xdk-kr-cG7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nyt-YD-Fha">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
