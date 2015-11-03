@@ -53,15 +53,24 @@ class ControllerTransitioningViewController: UIViewController{
 //推出视图切换效果
 extension ControllerTransitioningViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        return AnimatedTransitioning2()
+        
+        return AnimatedTransitioning2(type:operation)
     }
+//    
+//    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?{
+//        
+//        UIViewControllerContextTransitioning
+//        let transitioning = UIViewControllerInteractiveTransitioning()
+//    }
+    
+  
 }
 
 
 //模态视图切换效果
 extension ControllerTransitioningViewController:UIViewControllerTransitioningDelegate{
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        return AnimatedTransitioning2()
+        return AnimatedTransitioning1()
     }
 }
 

@@ -16,10 +16,16 @@ class To1ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.redColor()
-      
+        navigationController?.delegate = self
          
     }
 
         
 }
 
+extension To1ViewController:UINavigationControllerDelegate{
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        
+        return AnimatedTransitioning2(type:operation)
+    }
+}
