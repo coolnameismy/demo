@@ -11,6 +11,9 @@ import UIKit
 
 class ControllerTransitioningViewController: UIViewController{
     
+    //切换动画的触发对象
+    public var transitioningSender:UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
@@ -37,6 +40,7 @@ class ControllerTransitioningViewController: UIViewController{
     @IBAction func Transitioning1(sender: AnyObject) {
         let toVC = To1ViewController()
         navigationController?.delegate = self
+        transitioningSender = sender as UIView
         navigationController?.pushViewController(toVC, animated: true)
     }
     
@@ -63,12 +67,12 @@ extension ControllerTransitioningViewController:UINavigationControllerDelegate{
 //        let transitioning = UIViewControllerInteractiveTransitioning()
 //    }
     
-  
 }
 
 
 //模态视图切换效果
 extension ControllerTransitioningViewController:UIViewControllerTransitioningDelegate{
+    
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
         return AnimatedTransitioning1()
     }

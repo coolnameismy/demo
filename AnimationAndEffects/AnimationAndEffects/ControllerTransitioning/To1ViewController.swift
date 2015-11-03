@@ -17,7 +17,8 @@ class To1ViewController: UIViewController {
         
         view.backgroundColor = UIColor.redColor()
         navigationController?.delegate = self
-         
+//        view.layer.mask = nil
+        
     }
 
         
