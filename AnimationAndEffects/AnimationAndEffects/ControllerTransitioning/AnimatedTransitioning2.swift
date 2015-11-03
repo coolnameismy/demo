@@ -67,50 +67,34 @@ class AnimatedTransitioning2: NSObject, UIViewControllerAnimatedTransitioning {
         containerView!.addSubview(toVC.view)
     
         
-//        view.alpha = 0
+        //遮罩层
+        let mask = CAShapeLayer()
+        view.layer.mask = mask
+        
+        //画出小圆
+        let s_center = CGPoint(x: 50, y: 50)
+        let s_radius:CGFloat =  sqrt(800)
+        let s_maskPath = UIBezierPath(ovalInRect:CGRectInset(CGRect(x: s_center.x, y: s_center.y, width: 1, height: 1), -s_radius, -s_radius))
+        //        mask.path = s_maskPath.CGPath
+        
+        //画出大圆
+        let l_center = CGPoint(x: 50, y: 50)
+        let l_radius = sqrt( pow(view.bounds.width - l_center.x, 2) + pow(view.bounds.height - l_center.y, 2) )
+        let l_maskPath = UIBezierPath(ovalInRect:CGRectInset(CGRect(x: l_center.x, y: l_center.y, width: 1, height: 1), -l_radius, -l_radius))
+        
+        ////错误用法，animationWithDuration不能通过操作layer产生动画
+        //UIView.animateWithDuration(5) { () -> Void in
+        //     mask.path = b_maskPath.CGPath
+        //}
+        
+        let baseAnimation = CABasicAnimation(keyPath: "path")
+        baseAnimation.duration = 0.5
+        baseAnimation.fromValue = s_maskPath.CGPath
+        baseAnimation.toValue = l_maskPath.CGPath
+        baseAnimation.delegate = self
+        mask.addAnimation(baseAnimation, forKey: "path")
 
-//        let maskView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-//        maskView.backgroundColor = UIColor.greenColor()
-//        view.addSubview(maskView)
-//
-//        let octocatView = UIImageView(image: UIImage(named: "octocat.png"))
-//        octocatView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-//        maskView.addSubview(octocatView)
-
-//        let masklayer = CALayer()
-//        masklayer.frame = CGRect(x: 0 , y: 0, width: 0, height: 0)
-//        masklayer.backgroundColor = UIColor.whiteColor().CGColor
-//        masklayer.contents = octocatView
-//        maskView.layer.mask =  masklayer
-        
-        
-        let masklayer = CAShapeLayer()
-        let bezierPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 50, height: 50))
-        let endBezierPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 500, height: 500))
-        masklayer.path = bezierPath.CGPath
-        toVC.view.layer.mask = masklayer;
-        
-        let maskLayerAnimation = CABasicAnimation(keyPath: "path")
-        
-        maskLayerAnimation.fromValue =  bezierPath.CGPath
-        maskLayerAnimation.toValue = endBezierPath.CGPath
-        maskLayerAnimation.duration = transitionDuration(transitionContext)
-        maskLayerAnimation.delegate = self
-        masklayer.addAnimation(maskLayerAnimation, forKey: "path")
-
-        
-
-        
-//        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: .CurveLinear, animations: {
-////                masklayer.frame = CGRect(x: 0 , y: 100, width: 200, height: 200)
-//                  view.alpha = 1
-//            
-//            }, completion: {
-//                finished in
-////                view.bounds = UIScreen.mainScreen().bounds
-////                view.backgroundColor = UIColor.whiteColor()
-//                transitionContext.completeTransition(true)
-//        })
+ 
 
     }
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
