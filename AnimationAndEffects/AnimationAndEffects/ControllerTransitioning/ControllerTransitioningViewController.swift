@@ -12,35 +12,21 @@ import UIKit
 class ControllerTransitioningViewController: UIViewController{
     
     //切换动画的触发对象
-    public var transitioningSender:UIView?
+    internal var transitioningSender:UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
-        
-//        let octocatView = UIImageView(image: UIImage(named: "octocat.png"))
-//        octocatView.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
-//        view.addSubview(octocatView)
-//    
-//        let masklayer = CALayer()
-//        masklayer.frame = CGRect(x: view.center.x, y: view.center.y, width: 0, height: 0)
-//        masklayer.backgroundColor = UIColor.whiteColor().CGColor
-//        masklayer.contents = octocatView
-//        view.layer.mask =  masklayer
-//        //2秒钟自动关闭
-//        let t:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC))
-//        dispatch_after(t, dispatch_get_main_queue()) { () -> Void in
-//            UIView.animateWithDuration(1, animations: { () -> Void in
-//                masklayer.frame = self.view.frame
-//            })
-//        }
+
+        let bg = UIImageView(image: UIImage(named: "x1"))
+        bg.frame = view.frame
+        view.addSubview(bg)
     }
     
     //推出视图切换效果
     @IBAction func Transitioning1(sender: AnyObject) {
         let toVC = To1ViewController()
         navigationController?.delegate = self
-        transitioningSender = sender as UIView
+        transitioningSender = sender as! UIView
         navigationController?.pushViewController(toVC, animated: true)
     }
     
@@ -58,7 +44,9 @@ class ControllerTransitioningViewController: UIViewController{
 extension ControllerTransitioningViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
         
-        return AnimatedTransitioning2(type:operation)
+        let transitioningAnimation = AnimatedTransitioning2(type:operation)
+        transitioningAnimation.sender = transitioningSender
+        return transitioningAnimation
     }
 //    
 //    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?{

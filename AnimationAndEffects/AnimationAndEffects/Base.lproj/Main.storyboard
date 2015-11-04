@@ -152,18 +152,55 @@
                         <viewControllerLayoutGuide type="bottom" id="6NE-Yr-QnI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9ol-MR-Lu3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVJ-Lo-ThR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="普通Controller转场"/>
+                                <state key="normal" title="push转场"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="27" y="123" width="135" height="30"/>
+                                    <rect key="frame" x="27" y="123" width="60" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="Transitioning1:" destination="Ief-QR-kQG" eventType="touchUpInside" id="rBH-SG-HpR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shY-w8-Neq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="push转场"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="236" y="128" width="60" height="60"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Transitioning1:" destination="Ief-QR-kQG" eventType="touchUpInside" id="6kq-RL-ys3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujf-6q-8yp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="push转场"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="478" width="60" height="60"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Transitioning1:" destination="Ief-QR-kQG" eventType="touchUpInside" id="RMJ-Fr-pif"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2n3-u2-NKD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="push转场"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="207" y="478" width="60" height="60"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Transitioning1:" destination="Ief-QR-kQG" eventType="touchUpInside" id="Ips-FG-GKI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jev-9h-k8O">
@@ -172,7 +209,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="模态Controller转场"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="171" width="128" height="30"/>
+                                    <rect key="frame" x="27" y="230" width="128" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="Transitioning2:" destination="Ief-QR-kQG" eventType="touchUpInside" id="Qzg-XH-NYF"/>
@@ -183,12 +220,18 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="BVJ-Lo-ThR"/>
+                                <exclude reference="shY-w8-Neq"/>
+                                <exclude reference="ujf-6q-8yp"/>
+                                <exclude reference="2n3-u2-NKD"/>
                                 <exclude reference="Jev-9h-k8O"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="BVJ-Lo-ThR"/>
+                                <include reference="shY-w8-Neq"/>
+                                <include reference="ujf-6q-8yp"/>
+                                <include reference="2n3-u2-NKD"/>
                                 <include reference="Jev-9h-k8O"/>
                             </mask>
                         </variation>

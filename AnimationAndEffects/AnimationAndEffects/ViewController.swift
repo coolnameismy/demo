@@ -18,10 +18,7 @@ class ViewController: UIViewController {
     }
     
     func decorate(){
-        //遮罩层
-        let mask = CAShapeLayer()
-        view.layer.mask = mask
-      
+        
         //画出小圆
         let s_center = CGPoint(x: 50, y: 50)
         let s_radius:CGFloat =  sqrt(800)
@@ -37,6 +34,11 @@ class ViewController: UIViewController {
 //UIView.animateWithDuration(5) { () -> Void in
 //     mask.path = b_maskPath.CGPath
 //}
+        //遮罩层
+        let mask = CAShapeLayer()
+        mask.path = l_maskPath.CGPath
+        view.layer.mask = mask
+        
         
         let baseAnimation = CABasicAnimation(keyPath: "path")
         baseAnimation.duration = 0.5
