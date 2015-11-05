@@ -38,8 +38,8 @@ class To1ViewController: UIViewController {
 extension To1ViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
         
-        let transitioningAnimation = AnimatedTransitioning2(type:operation)
-        transitioningAnimation.sender = transitioningSender
-        return transitioningAnimation
+        let expandAnimation = ExpandAnimation(type:operation)
+        expandAnimation.sender = transitioningSender
+        return expandAnimation
     }
 }

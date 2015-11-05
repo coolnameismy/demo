@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-654" y="825.75"/>
         </scene>
-        <!--Controller Transitioning View Controller-->
+        <!--Controller Transitioning Demo View Controller-->
         <scene sceneID="BA3-sX-KUy">
             <objects>
-                <viewController id="Ief-QR-kQG" customClass="ControllerTransitioningViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ief-QR-kQG" customClass="ControllerTransitioningDemoViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cnR-l8-LyW"/>
                         <viewControllerLayoutGuide type="bottom" id="6NE-Yr-QnI"/>

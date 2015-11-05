@@ -1,5 +1,5 @@
 //
-//  AnimatedTransitioning2.swift
+//  ExpandAnimation.swift
 //  AnimationAndEffects
 //
 //  Created by ZTELiuyw on 15/11/2.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimatedTransitioning2: NSObject, UIViewControllerAnimatedTransitioning {
+class ExpandAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 
     var transitionContext:UIViewControllerContextTransitioning!
     var type:UINavigationControllerOperation!
@@ -38,6 +38,7 @@ class AnimatedTransitioning2: NSObject, UIViewControllerAnimatedTransitioning {
         NSLog("animation ended")
     }
     
+    //弹出效果 在固定位置进行的动画，可以根据需要改成动态位置触发
     func PopTransition(transitionContext: UIViewControllerContextTransitioning){
         
         let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
@@ -75,6 +76,7 @@ class AnimatedTransitioning2: NSObject, UIViewControllerAnimatedTransitioning {
 
     }
     
+    //present 动画，根据触发点的位置开始启动动画
     func PushTransition(transitionContext: UIViewControllerContextTransitioning){
         
         let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
@@ -83,16 +85,12 @@ class AnimatedTransitioning2: NSObject, UIViewControllerAnimatedTransitioning {
         let containerView = transitionContext.containerView()
         let view = toVC.view!
         
-//        containerView!.addSubview(fromVC.view)
         containerView!.addSubview(toVC.view)
 
-        //画出小圆
-//        let s_center = (sender?.center)!
-//        let s_radius:CGFloat =  sqrt( pow(CGRectGetMaxX(view.frame) - s_center.x, 2) + pow(CGRectGetMaxY(view.frame) - s_center.y, 2))
+        //小圆路径
         let s_maskPath = UIBezierPath(ovalInRect:(sender?.frame)!)
-        // mask.path = s_maskPath.CGPath
-        
-        //画出大圆
+    
+        //大圆路径
         let l_center =  (sender?.center)!
         
         var l_radius:CGFloat

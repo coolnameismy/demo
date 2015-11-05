@@ -9,10 +9,12 @@
 import UIKit
 
 
-class ControllerTransitioningViewController: UIViewController{
+class ControllerTransitioningDemoViewController: UIViewController{
     
     //切换动画的触发对象
     internal var transitioningSender:UIView!
+    //dismiss的交互效果
+    var interactiveTransition:SwipeUpInteractiveTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,37 +35,48 @@ class ControllerTransitioningViewController: UIViewController{
     //模态视图切换效果
     @IBAction func Transitioning2(sender: AnyObject) {
         let toVC = To2ViewController()
-        navigationController?.delegate = nil
-        toVC.transitioningDelegate = self
+        interactiveTransition = SwipeUpInteractiveTransition(vc:toVC)
+//        toVC.transitioningDelegate = self
+//        toVC.modalTransitionStyle = .CrossDissolve
+//        toVC.modalPresentationStyle = .FormSheet
         navigationController?.presentViewController(toVC, animated: true, completion: nil)
     }
     
 }
 
 //推出视图切换效果
-extension ControllerTransitioningViewController:UINavigationControllerDelegate{
+extension ControllerTransitioningDemoViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
         
-        let transitioningAnimation = AnimatedTransitioning2(type:operation)
+        let transitioningAnimation = ExpandAnimation(type:operation)
         transitioningAnimation.sender = transitioningSender
         return transitioningAnimation
+
     }
-//    
-//    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?{
-//        
-//        UIViewControllerContextTransitioning
-//        let transitioning = UIViewControllerInteractiveTransitioning()
-//    }
+    
     
 }
 
 
 //模态视图切换效果
-extension ControllerTransitioningViewController:UIViewControllerTransitioningDelegate{
+extension ControllerTransitioningDemoViewController:UIViewControllerTransitioningDelegate{
     
+    //返回Presented使用的UIViewControllerAnimatedTransitioning类
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        return AnimatedTransitioning1()
+        return PresentedAnimation()
     }
+
+    //返回dismiss使用的UIViewControllerAnimatedTransitioning类
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissAnimation()
+    }
+    
+    //返回dismiss交互时的使用的UIViewControllerInteractiveTransitioning类
+    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactiveTransition.isInteracting ? interactiveTransition : nil
+    }
+    
+    
 }
 
 

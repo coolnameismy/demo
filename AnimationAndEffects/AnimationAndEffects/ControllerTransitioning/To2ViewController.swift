@@ -14,13 +14,18 @@ class To2ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.greenColor()
-       
+        //下滑关闭文字
+        let lbl = UILabel(frame:view.frame)
+        lbl.text = "下滑关闭"
+        lbl.textAlignment = .Center
+        view.addSubview(lbl)
+        
         
         //2秒钟自动关闭
-        let t:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC))
-        dispatch_after(t, dispatch_get_main_queue()) { () -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+        //let t:dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC))
+        //dispatch_after(t, dispatch_get_main_queue()) { () -> Void in
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        //}
     }
 
    
