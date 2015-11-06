@@ -10,8 +10,11 @@ import UIKit
 
 class ExpandAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 
+    //保存上下文
     var transitionContext:UIViewControllerContextTransitioning!
+    //Pop or push
     var type:UINavigationControllerOperation!
+    //初始点击的uiview对象，需要他的frame作为初始位置
     var sender:UIView?
     
     convenience init(type:UINavigationControllerOperation) {
@@ -138,8 +141,9 @@ class ExpandAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 
     }
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        
-        self.transitionContext.completeTransition(!self.transitionContext.transitionWasCancelled())
+        //动画完成后去处遮罩
+        self.transitionContext.completeTransition(true)
+        //动画完成后去处遮罩
         self.transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
         self.transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
 

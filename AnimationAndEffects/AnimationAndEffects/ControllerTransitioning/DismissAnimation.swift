@@ -30,11 +30,9 @@ class DismissAnimation:NSObject,UIViewControllerAnimatedTransitioning {
         let duration: NSTimeInterval = self.transitionDuration(transitionContext)
         UIView.animateWithDuration(duration, animations: {
             fromVC.view.frame = finalFrame
-            }, completion: {(finished: Bool) in    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                
+            }, completion: {
+                (finished: Bool) in transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         })
 
-    }
-    
-    
+     }
 }

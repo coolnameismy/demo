@@ -11,8 +11,10 @@ import UIKit
 public class PresentedAnimation: NSObject,UIViewControllerAnimatedTransitioning {
 
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval{
+        //转场过渡动画的执行时间
         return 0.6
     }
+    
     // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
     //在进行切换的时候将调用该方法，我们对于切换时的UIView的设置和动画都在这个方法中完成。
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning){
@@ -27,6 +29,7 @@ public class PresentedAnimation: NSObject,UIViewControllerAnimatedTransitioning 
         toVC.view.frame = CGRectOffset(finalFrameForVC, 0, bounds.size.height)
         containerView!.addSubview(toVC.view)
         
+        //自下而上弹出toVC的动画
         UIView.animateWithDuration(transitionDuration(transitionContext),
                                     delay: 0.0,
                                     usingSpringWithDamping: 0.7,
@@ -44,6 +47,7 @@ public class PresentedAnimation: NSObject,UIViewControllerAnimatedTransitioning 
 
     }
     
+    //执行完成后的回调
     public func animationEnded(transitionCompleted: Bool){
             NSLog("animation ended")
     }

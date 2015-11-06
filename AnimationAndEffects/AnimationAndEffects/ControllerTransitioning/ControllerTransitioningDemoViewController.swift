@@ -44,21 +44,22 @@ class ControllerTransitioningDemoViewController: UIViewController{
     
 }
 
-//推出视图切换效果
+//push、pop视图切换
 extension ControllerTransitioningDemoViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+
         
         let transitioningAnimation = ExpandAnimation(type:operation)
         transitioningAnimation.sender = transitioningSender
+        //返回动画的实现类
         return transitioningAnimation
-
     }
     
     
 }
 
 
-//模态视图切换效果
+//present、dismiss视图切换效果
 extension ControllerTransitioningDemoViewController:UIViewControllerTransitioningDelegate{
     
     //返回Presented使用的UIViewControllerAnimatedTransitioning类
