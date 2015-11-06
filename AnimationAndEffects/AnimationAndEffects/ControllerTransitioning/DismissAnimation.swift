@@ -16,6 +16,7 @@ class DismissAnimation:NSObject,UIViewControllerAnimatedTransitioning {
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning){
         
+         NSLog("animateTransition start")
         let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
 
@@ -35,4 +36,8 @@ class DismissAnimation:NSObject,UIViewControllerAnimatedTransitioning {
         })
 
      }
+    
+    func animationEnded(transitionCompleted: Bool){
+        NSLog("animateTransition ended")
+    }
 }

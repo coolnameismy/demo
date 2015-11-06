@@ -36,19 +36,37 @@ class ControllerTransitioningDemoViewController: UIViewController{
     @IBAction func Transitioning2(sender: AnyObject) {
         let toVC = To2ViewController()
         interactiveTransition = SwipeUpInteractiveTransition(vc:toVC)
-//        toVC.transitioningDelegate = self
+        toVC.transitioningDelegate = self
 //        toVC.modalTransitionStyle = .CrossDissolve
 //        toVC.modalPresentationStyle = .FormSheet
         navigationController?.presentViewController(toVC, animated: true, completion: nil)
     }
+
     
+
+    override func viewWillAppear(animated: Bool) {
+        NSLog("ControllerTransitioningDemoViewController viewWillAppear")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        NSLog("ControllerTransitioningDemoViewController viewDidAppear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSLog("ControllerTransitioningDemoViewController viewDidDisappear")
+    }
+    
+
 }
+
+
+
 
 //push、pop视图切换
 extension ControllerTransitioningDemoViewController:UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
 
-        
         let transitioningAnimation = ExpandAnimation(type:operation)
         transitioningAnimation.sender = transitioningSender
         //返回动画的实现类

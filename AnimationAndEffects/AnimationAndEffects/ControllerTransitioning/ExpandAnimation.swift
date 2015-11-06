@@ -28,7 +28,7 @@ class ExpandAnimation: NSObject, UIViewControllerAnimatedTransitioning {
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning){
         self.transitionContext = transitionContext
-        NSLog("animateTransition")
+        NSLog("animateTransition start")
         if(type == .Push){
             PushTransition(transitionContext)
         }else if(type == .Pop){
@@ -38,7 +38,7 @@ class ExpandAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func animationEnded(transitionCompleted: Bool){
-        NSLog("animation ended")
+        NSLog("animateTransition ended")
     }
     
     //弹出效果 在固定位置进行的动画，可以根据需要改成动态位置触发

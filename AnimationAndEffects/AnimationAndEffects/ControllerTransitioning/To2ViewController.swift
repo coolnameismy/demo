@@ -27,7 +27,19 @@ class To2ViewController: UIViewController {
         //self.dismissViewControllerAnimated(true, completion: nil)
         //}
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        NSLog("To2ViewController viewWillAppear")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        NSLog("To2ViewController viewDidAppear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSLog("To2ViewController viewDidDisappear")
+    }
    
 }
 

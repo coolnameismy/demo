@@ -26,13 +26,16 @@ class To1ViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        NSLog("viewWillAppear")
+        NSLog("To1ViewController viewWillAppear")
     }
 
     override func viewDidAppear(animated: Bool) {
-        NSLog("viewDidAppear")
+        NSLog("To1ViewController viewDidAppear")
     }
-    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSLog("To1ViewController viewDidDisappear")
+    }
 }
 
 extension To1ViewController:UINavigationControllerDelegate{

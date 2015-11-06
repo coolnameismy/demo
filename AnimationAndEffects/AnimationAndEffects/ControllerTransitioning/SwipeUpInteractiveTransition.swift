@@ -39,9 +39,9 @@ class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
             fraction = fminf(fmaxf(fraction, 0.0), 1.0)
             shouldComplete = fraction > 0.5
             updateInteractiveTransition(CGFloat(fraction))
-            NSLog("x:%f y:%f" , translation.x,translation.y)
-            NSLog("fraction:%f" , fraction)
-            NSLog("shouldComplete:%@" ,shouldComplete)
+//            NSLog("x:%f y:%f" , translation.x,translation.y)
+//            NSLog("fraction:%f" , fraction)
+//            NSLog("shouldComplete:%@" ,shouldComplete)
         case .Ended , .Cancelled:
              isInteracting = false
              if(!shouldComplete || gesture.state == .Cancelled){

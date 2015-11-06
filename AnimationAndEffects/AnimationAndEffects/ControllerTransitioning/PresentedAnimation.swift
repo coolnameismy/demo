@@ -18,6 +18,8 @@ public class PresentedAnimation: NSObject,UIViewControllerAnimatedTransitioning 
     // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
     //在进行切换的时候将调用该方法，我们对于切换时的UIView的设置和动画都在这个方法中完成。
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning){
+        NSLog("animateTransition start")
+        
         //拿到前后的两个controller
         let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
@@ -43,7 +45,6 @@ public class PresentedAnimation: NSObject,UIViewControllerAnimatedTransitioning 
                                         transitionContext.completeTransition(true)
                                         fromVC.view.alpha = 1.0
                                     })
-         NSLog("animateTransition")
 
     }
     
