@@ -14,6 +14,8 @@
     //系统蓝牙设备管理对象，可以把他理解为主设备，通过他，可以去扫描和链接外设
     CBCentralManager *manager;
     UILabel *info;
+    //发现设备数组
+    NSMutableArray *discoverPeripherals;
 }
 
 @end
@@ -36,6 +38,8 @@
     
     //初始化并设置委托和线程队列，最好一个线程的参数可以为nil，默认会就main线程
     manager = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
+    //持有发现的设备
+    discoverPeripherals = [[NSMutableArray alloc]init];
     //页面样式
     [self.view setBackgroundColor:[UIColor whiteColor]];
     info = [[UILabel alloc]initWithFrame:self.view.frame];
@@ -70,7 +74,7 @@
              第一个参数nil就是扫描周围所有的外设，扫描到外设后会进入
              - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI;
              */
-            [manager scanForPeripheralsWithServices:nil options:nil];
+            [central scanForPeripheralsWithServices:nil options:nil];
             
             break;
         default:
@@ -85,15 +89,17 @@
     NSLog(@"当扫描到设备:%@",peripheral.name);
     //接下连接我们的测试设备，如果你没有设备，可以下载一个app叫lightbule的app去模拟一个设备
     //这里自己去设置下连接规则，我设置的是P开头的设备
-    if ([peripheral.name hasPrefix:@"P"]){
+//    if ([peripheral.name hasPrefix:@"P"]){
         /*
          一个主设备最多能连7个外设，每个外设最多只能给一个主设备连接,连接成功，失败，断开会进入各自的委托
          - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral;//连接外设成功的委托
          - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;//外设连接失败的委托
          - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;//断开外设的委托
          */
-        [manager connectPeripheral:peripheral options:nil];
-    }
+    
+        [discoverPeripherals addObject:peripheral];
+        [central connectPeripheral:peripheral options:nil];
+//    }
     
     
 }
