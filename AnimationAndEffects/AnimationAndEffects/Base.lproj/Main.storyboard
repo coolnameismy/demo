@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afu-ap-6gf">
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afu-ap-6gf">
                                 <rect key="frame" x="33" y="103" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -38,7 +38,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="33" y="173" width="163" height="30"/>
+                                    <rect key="frame" x="33" y="189" width="163" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="kqr-W1-1TQ" kind="show" id="QL2-eQ-Ru4"/>
@@ -52,7 +52,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="33" y="235" width="163" height="30"/>
+                                    <rect key="frame" x="33" y="243" width="163" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="kog-C8-dRW" kind="show" id="UC8-hv-5bg"/>
@@ -114,6 +114,20 @@
                                     <segue destination="Ief-QR-kQG" kind="show" id="g3A-eO-LwE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-47-k28">
+                                <rect key="frame" x="33" y="103" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="隐式动画">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="149" width="163" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="fbm-PB-KzV" kind="show" id="fjh-5f-4vF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -124,6 +138,7 @@
                                 <exclude reference="0zm-WL-BEP"/>
                                 <exclude reference="FHb-hE-JVo"/>
                                 <exclude reference="iKW-Pj-sdg"/>
+                                <exclude reference="IS0-47-k28"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -134,6 +149,7 @@
                                 <include reference="0zm-WL-BEP"/>
                                 <include reference="FHb-hE-JVo"/>
                                 <include reference="iKW-Pj-sdg"/>
+                                <include reference="IS0-47-k28"/>
                             </mask>
                         </variation>
                     </view>
@@ -259,6 +275,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMF-rE-rfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="127.5" y="1190.25"/>
+        </scene>
+        <!--Implicit Animation View Controller-->
+        <scene sceneID="4vD-a7-c4a">
+            <objects>
+                <viewController id="fbm-PB-KzV" customClass="ImplicitAnimationViewController" customModule="AnimationAndEffects" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5W-bu-ASv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ABV-Ua-gdc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Va-a9-hnr">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dF2-xI-Psp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1501.5" y="-87"/>
         </scene>
         <!--Quick Example View Controller-->
         <scene sceneID="ND6-tb-dax">

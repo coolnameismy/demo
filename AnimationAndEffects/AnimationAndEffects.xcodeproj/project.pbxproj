@@ -16,6 +16,7 @@
 		E1BE74AE1BE4FFFE004CCFBA /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A61BE4FFFE004CCFBA /* text.png */; settings = {ASSET_TAGS = (); }; };
 		E1BE74AF1BE4FFFE004CCFBA /* yurt1.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A71BE4FFFE004CCFBA /* yurt1.png */; settings = {ASSET_TAGS = (); }; };
 		E1BE74B01BE4FFFE004CCFBA /* yurt2.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BE74A81BE4FFFE004CCFBA /* yurt2.png */; settings = {ASSET_TAGS = (); }; };
+		E1D0BBF41BF78E0900F46E04 /* ImplicitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D0BBF31BF78E0900F46E04 /* ImplicitAnimationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F07B09E11BDF141800FB31EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09E01BDF141800FB31EA /* AppDelegate.swift */; };
 		F07B09E31BDF141800FB31EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07B09E21BDF141800FB31EA /* ViewController.swift */; };
 		F07B09E61BDF141800FB31EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07B09E41BDF141800FB31EA /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		E1BE74A61BE4FFFE004CCFBA /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
 		E1BE74A71BE4FFFE004CCFBA /* yurt1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurt1.png; sourceTree = "<group>"; };
 		E1BE74A81BE4FFFE004CCFBA /* yurt2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yurt2.png; sourceTree = "<group>"; };
+		E1D0BBF31BF78E0900F46E04 /* ImplicitAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImplicitAnimationViewController.swift; sourceTree = "<group>"; };
 		F07B09DD1BDF141800FB31EA /* AnimationAndEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationAndEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07B09E01BDF141800FB31EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F07B09E21BDF141800FB31EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				F07B09FF1BE0A6CD00FB31EA /* TransferAnimationViewController.swift */,
 				F07B0A191BE1B0EA00FB31EA /* UIKitDynamicsViewController.swift */,
 				E1BE749E1BE4FECC004CCFBA /* MotionEffectsViewController.swift */,
+				E1D0BBF31BF78E0900F46E04 /* ImplicitAnimationViewController.swift */,
 				F0B884561BE70194006D72DE /* ControllerTransitioning */,
 				F07B09F61BE06BCC00FB31EA /* images */,
 			);
@@ -327,6 +330,7 @@
 				F07B0A001BE0A6CD00FB31EA /* TransferAnimationViewController.swift in Sources */,
 				F0B8845E1BE74908006D72DE /* To2ViewController.swift in Sources */,
 				F07B09F51BDF59B700FB31EA /* BasicAnimationViewController.swift in Sources */,
+				E1D0BBF41BF78E0900F46E04 /* ImplicitAnimationViewController.swift in Sources */,
 				F07B09F31BDF158000FB31EA /* QuickExampleViewController.swift in Sources */,
 				F0B884691BEAF5FF006D72DE /* DismissAnimation.swift in Sources */,
 				F07B09FA1BE06C6400FB31EA /* KeyFrameAnimationViewController.swift in Sources */,
