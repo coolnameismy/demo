@@ -19,10 +19,6 @@
 #### ThreadAndAsynchronization
 [ios的线程和同步异步操作](http://liuyanwei.jumppo.com/2015/08/19/ios-ThreadAndAsynchronization.html) 
 
-
-#### DeepIntoUnslider
-[深入理解unslider.js源码](http://liuyanwei.jumppo.com/2015/08/29/go-deep-into-unsilder.js.html)
-
 ####MasonryDemo
 [Masonry的使用](http://liuyanwei.jumppo.com/2015/06/14/ios-library-masonry.html)
 
