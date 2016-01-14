@@ -8,24 +8,20 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  NavigatorIOS,
 } from 'react-native';
 
+var MainView = require("./View/MainView.ios.js")
 class helloworld extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native~~~
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+        <NavigatorIOS
+        style={{flex:1}}
+        initialRoute={{
+          title: '主页',
+          component: MainView
+        }} />
     );
   }
 }
