@@ -17,13 +17,11 @@ var Page1View = require("./Page1View.ios.js");
 var MainView = React.createClass({
   render: function() {
     return (
-      <TouchableWithoutFeedback onPress={this.goto}>
        <View style={styles.container} >
-          <Text style={styles.text}>
-              aaadasdsadsa
+          <Text style={styles.text} onPress={this.goto}>
+              布局练习
           </Text>
         </View>
-      </TouchableWithoutFeedback>
       );
   },
   goto:function(){
@@ -31,34 +29,16 @@ var MainView = React.createClass({
       component:Page1View,
       title:"page1"
     });
+  },
+ replace:function(){
+    this.props.navigator.replace({
+      component:Page1View,
+      title:"page1"
+    });
   }
 });
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // textAlign:'center',
-    backgroundColor: 'red',
-   
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    height:100,
-    color:"red"
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  text:{
-     color:'white'
-  }
-});
+//加载公共样式
+const styles =  require('../style/common.css.js');
 
 module.exports = MainView;
