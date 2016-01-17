@@ -13,41 +13,34 @@ var {
 } = React;
 
 var exLayoutView = React.createClass({
+ 
   render: function() {
     return (
        <View style={styles.main}>
          <View style={[styles.item,styles.center]}>
-            <Text style={styles.font}>酒店</Text>
+            <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)} >{this.props.title}</Text>
          </View>
 	         
          <View style={[styles.item,styles.lineLeftRight]}>
            <View style={[styles.center,styles.flex,styles.lineCenter]}>
-              <Text style={styles.font}>海外酒店</Text>
+              <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[0]}</Text>
             </View>
             <View style={[styles.center,styles.flex]}>
-               <Text style={styles.font}>特惠酒店</Text>
+               <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[1]}</Text>
              </View>
          </View>
 
          <View style={styles.item}>
            <View style={[styles.center,styles.flex,styles.lineCenter]}>
-              <Text style={styles.font}>团购</Text>
+              <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[2]}</Text>
             </View>
             <View style={[styles.center,styles.flex]}>
-               <Text style={styles.font}>酒店.客栈</Text>
+               <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[3]}</Text>
              </View>
          </View>
        </View>
-
-       // <Text style={styles.main} onPress={this.clicked}>
-       //      I am page1 点击返回 
-       //   </Text>
     );
   },
-  clicked:function(){
-  	this.props.navigator.pop();
-  }
-
 });
 
 
@@ -70,6 +63,8 @@ const styles = StyleSheet.create({
   center:{
     justifyContent:'center',
     alignItems:'center',
+    // flexDirection:'row',
+    // backgroundColor:'red',
   },
   flex:{
     flex:1,
@@ -87,6 +82,9 @@ const styles = StyleSheet.create({
     color:'#fff',
     fontSize:16,
     fontWeight:'bold',
+    // backgroundColor:'green',
+    // height:40,
+    // flex:1,
   }
 });
 

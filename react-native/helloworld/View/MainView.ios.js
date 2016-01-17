@@ -12,23 +12,28 @@ var {
   TouchableHighlight,
 } = React;
 
-var exLayoutView = require("./ex-layout.ios.js");
+var CellNav = require("./ex-layout.ios.js");
+var cellItems = ['ex1','ex2','ex3','ex4'];
+var cellItemsClicked = function(){
+  alert("hello");
+} 
+// clicked={cellItemsClicked}
+
 
 var MainView = React.createClass({
   render: function() {
     return (
-       <View style={styles.container} >
-          <Text style={styles.text} onPress={this.goto}>
-              布局练习
-          </Text>
+        <View style={styles.main} >
+          <CellNav title='酒店' items={cellItems} clicked={this.cellNavClicked}> </CellNav>
         </View>
       );
   },
-  goto:function(){
-    this.props.navigator.push({
-      component:exLayoutView,
-      title:"page1"
-    });
+  cellNavClicked:function(msg){
+     alert(msg);
+    // this.props.navigator.push({
+    //   component:exLayoutView,
+    //   title:"page1"
+    // });
   },
  replace:function(){
     this.props.navigator.replace({
@@ -39,6 +44,10 @@ var MainView = React.createClass({
 });
 
 //加载公共样式
-const styles =  require('../style/common.css.js');
+const styles =  StyleSheet.create({
+  main:{
+    flex:1
+  }
+})
 
 module.exports = MainView;
