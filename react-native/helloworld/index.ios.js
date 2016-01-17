@@ -12,7 +12,9 @@ import React, {
   NavigatorIOS,
 } from 'react-native';
 
-var MainView = require("./View/MainView.ios.js")
+var MainView = require("./View/MainView.ios.js");
+var exLayoutView = require("./View/ex-layout.ios.js");
+
 class helloworld extends Component {
   render() {
     return (
@@ -20,7 +22,8 @@ class helloworld extends Component {
         style={{flex:1}}
         initialRoute={{
           title: '主页',
-          component: MainView
+          component: exLayoutView,
+          navigationBarHidden:true,
         }} />
     );
   }

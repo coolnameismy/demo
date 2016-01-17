@@ -12,7 +12,7 @@ var {
   TouchableHighlight,
 } = React;
 
-var Page1View = require("./Page1View.ios.js");
+var exLayoutView = require("./ex-layout.ios.js");
 
 var MainView = React.createClass({
   render: function() {
@@ -26,13 +26,13 @@ var MainView = React.createClass({
   },
   goto:function(){
     this.props.navigator.push({
-      component:Page1View,
+      component:exLayoutView,
       title:"page1"
     });
   },
  replace:function(){
     this.props.navigator.replace({
-      component:Page1View,
+      component:exLayoutView,
       title:"page1"
     });
   }
