@@ -12,30 +12,42 @@ var {
   PixelRatio,
 } = React;
 
+
+
 var exLayoutView = React.createClass({
- 
-  render: function() {
+  getInitialState: function() {
+    return {
+        title:this.props.title,
+    };
+  },
+  changeTitle:function()
+  {
+    this.setState({
+      title: this.state.title + '.',
+    })
+  },
+ render: function() {
     return (
        <View style={styles.main}>
          <View style={[styles.item,styles.center]}>
-            <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)} >{this.props.title}</Text>
+            <Text style={styles.font} onPress={this.changeTitle}>{this.state.title} </Text>
          </View>
 	         
          <View style={[styles.item,styles.lineLeftRight]}>
            <View style={[styles.center,styles.flex,styles.lineCenter]}>
-              <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[0]}</Text>
+              <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.items[0])}>{this.props.items[0]}</Text>
             </View>
             <View style={[styles.center,styles.flex]}>
-               <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[1]}</Text>
+               <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.items[1])}>{this.props.items[1]}</Text>
              </View>
          </View>
 
          <View style={styles.item}>
            <View style={[styles.center,styles.flex,styles.lineCenter]}>
-              <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[2]}</Text>
+              <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.items[2])}>{this.props.items[2]}</Text>
             </View>
             <View style={[styles.center,styles.flex]}>
-               <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.title)}>{this.props.items[3]}</Text>
+               <Text style={styles.font} onPress={this.props.clicked.bind(null,this.props.items[3])}>{this.props.items[3]}</Text>
              </View>
          </View>
        </View>

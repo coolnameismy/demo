@@ -29,7 +29,11 @@ var CommonStyle = StyleSheet.create({
 	},
 	text:{
 	   color:'black'
-	}
+	},
+    center:{
+   	 	justifyContent:'center',
+    	alignItems:'center',
+  	},
 });
 
 
