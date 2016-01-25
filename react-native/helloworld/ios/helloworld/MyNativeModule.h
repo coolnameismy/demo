@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "RCTBridge.h"
+#import "RCTEventDispatcher.h"
 
 @interface MyNativeModule : NSObject<RCTBridgeModule>
 
+-(void)afterHello;
 
 @end

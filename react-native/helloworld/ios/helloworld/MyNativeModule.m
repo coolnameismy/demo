@@ -7,9 +7,12 @@
 //
 
 #import "MyNativeModule.h"
-
+#import "RCTEventDispatcher.h"
 
 @implementation MyNativeModule
+
+
+@synthesize bridge = _bridge;
 
 /**
  * Place this macro in your class implementation to automatically register
@@ -32,12 +35,24 @@ RCT_EXPORT_MODULE()
 }
 
 //
-RCT_EXPORT_METHOD(Hello2:(RCTResponseSenderBlock)callback){
+RCT_EXPORT_METHOD(Hello:(RCTResponseSenderBlock)callback){
    callback(@[[NSNull null],[self Helloa]]);
+   [self afterHello];
 }
 
 //导出常量
 -(NSDictionary<NSString *,id> *)constantsToExport{
    return @{@"a":@"aa",@"b":@"bb"};
 }
+
+//事件
+-(void)afterHello{
+  [self.bridge.eventDispatcher sendAppEventWithName:@"afterHello" body:@{@"data":@"this is data"}];
+//设备事件
+//  self.bridge.eventDispatcher sendDeviceEventWithName:<#(NSString *)#> body:<#(id)#>
+}
+
+
+
+
 @end

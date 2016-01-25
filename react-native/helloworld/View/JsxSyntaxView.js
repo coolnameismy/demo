@@ -25,25 +25,13 @@ var props = {
 };
 
 
-var MyNativeModule = require('NativeModules').MyNativeModule;
-// console.log(require('NativeModules'));
-console.log(MyNativeModule);
-console.log(MyNativeModule.a + "|" + MyNativeModule.b);
 
 var JsxSyntaxView = React.createClass({
 
 
   /* 使用延展属性赋值 {...props}  */
   render: function() {
-      MyNativeModule.Hello2(function(){
-        console.log(arguments);
-      });
-
-    // console.log(React.NativeModules);
-    // console.log('>>>>>>>>>>');
-    // console.log(MyNativeModule);
-    // console.log('>>>>>>>>>>');
-
+     
     return (
 		<View style={styles.container}>
 			<MyText  {...props}></MyText>

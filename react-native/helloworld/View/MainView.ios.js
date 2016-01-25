@@ -12,11 +12,13 @@ var {
   TouchableHighlight,
 } = React;
 
-
-var cellItems = ['组件生命周期','jsx语法','ex3','ex4'];
 var ComponentLifecycleView = require("./ComponentLifecycleView.ios.js");
 var JsxSyntaxView = require("./JsxSyntaxView.js");
 var CellNav = require("./ex-layout.ios.js"); 
+var CallNativeModuleView = require("./CallNativeModuleView.js"); 
+
+var cellItems = ['组件生命周期','jsx语法','调用原生模块','ex4'];
+
 
 
 
@@ -33,6 +35,7 @@ var MainView = React.createClass({
      switch(item){
       case '组件生命周期' :  this.goto(ComponentLifecycleView);
       case 'jsx语法' :  this.goto(JsxSyntaxView);
+      case '调用原生模块' :  this.goto(CallNativeModuleView);
       break;
      }
   },

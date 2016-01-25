@@ -23,7 +23,6 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		F045747B1C50A6F4009826B4 /* MyNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F045747A1C50A6F4009826B4 /* MyNativeModule.m */; };
-		F04574881C50D851009826B4 /* RCTDeviceExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F04574871C50D851009826B4 /* RCTDeviceExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +129,6 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		F04574791C50A6F4009826B4 /* MyNativeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyNativeModule.h; path = helloworld/MyNativeModule.h; sourceTree = "<group>"; };
 		F045747A1C50A6F4009826B4 /* MyNativeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyNativeModule.m; path = helloworld/MyNativeModule.m; sourceTree = "<group>"; };
-		F04574861C50D851009826B4 /* RCTDeviceExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTDeviceExtension.h; path = helloworld/RCTDeviceExtension.h; sourceTree = "<group>"; };
-		F04574871C50D851009826B4 /* RCTDeviceExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTDeviceExtension.m; path = helloworld/RCTDeviceExtension.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,8 +244,6 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				F04574791C50A6F4009826B4 /* MyNativeModule.h */,
 				F045747A1C50A6F4009826B4 /* MyNativeModule.m */,
-				F04574861C50D851009826B4 /* RCTDeviceExtension.h */,
-				F04574871C50D851009826B4 /* RCTDeviceExtension.m */,
 			);
 			name = helloworld;
 			sourceTree = "<group>";
@@ -553,7 +548,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				F04574881C50D851009826B4 /* RCTDeviceExtension.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				F045747B1C50A6F4009826B4 /* MyNativeModule.m in Sources */,
 			);
