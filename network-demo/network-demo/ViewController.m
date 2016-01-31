@@ -80,31 +80,46 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
 
 #pragma mark -https认证
 -(BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection{
+    NSLog(@"=================connectionShouldUseCredentialStorage=================");
     return true;
 }
 - (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge{
+    NSLog(@"=================willSendRequestForAuthenticationChallenge=================");
     NSLog(@"didReceiveAuthenticationChallenge %@ %zd", [[challenge protectionSpace] authenticationMethod], (ssize_t) [challenge previousFailureCount]);
-    // 1.从服务器返回的受保护空间中拿到证书的类型
-    // 2.判断服务器返回的证书是否是服务器信任的
-    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]){
-
-        NSLog(@"是服务器信任的证书");
-        // 3.根据服务器返回的受保护空间创建一个证书
-        //         void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *)
-        //         代理方法的completionHandler block接收两个参数:
-        //         第一个参数: 代表如何处理证书
-        //         第二个参数: 代表需要处理哪个证书
-        //创建证书
-        NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
-        // 4.安装证书   completionHandler(NSURLSessionAuthChallengeUseCredential , credential);
-        
-        
-        [[challenge sender]  useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
-        [[challenge sender]  continueWithoutCredentialForAuthenticationChallenge: challenge];
-    }
+    
+    //1)获取trust object
+    SecTrustRef trust = challenge.protectionSpace.serverTrust;
+    SecTrustResultType result;
+    
+    //2)SecTrustEvaluate对trust进行验证
+    OSStatus status = SecTrustEvaluate(trust, &result);
+    if (status == errSecSuccess &&
+        (result == kSecTrustResultProceed ||
+         result == kSecTrustResultUnspecified)) {
+            
+            //3)验证成功，生成NSURLCredential凭证cred，告知challenge的sender使用这个凭证来继续连接
+            NSURLCredential *cred = [NSURLCredential credentialForTrust:trust];
+            [challenge.sender useCredential:cred forAuthenticationChallenge:challenge];
+            
+        } else {
+            
+            //5)验证失败，取消这次验证流程
+            [challenge.sender cancelAuthenticationChallenge:challenge];
+            
+        }
+    
+//    // 1.从服务器返回的受保护空间中拿到证书的类型
+//    // 2.判断服务器返回的证书是否是服务器信任的
+//    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]){
+//        NSLog(@"是服务器信任的证书");
+//        //通过认证
+//        [[challenge sender]  useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+//        [[challenge sender]  continueWithoutCredentialForAuthenticationChallenge: challenge];
+//    }
 }
 
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace{
+        NSLog(@"=================canAuthenticateAgainstProtectionSpace=================");
        return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
 }
 
