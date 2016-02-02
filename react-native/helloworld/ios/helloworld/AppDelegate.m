@@ -10,13 +10,18 @@
 #import "AppDelegate.h"
 
 #import "RCTRootView.h"
+#import "MyNativeStaticModule.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
-
+  
+   MyNativeStaticModule *test = [[MyNativeStaticModule alloc]init];
+  [test Helloa];
+  
   /**
    * Loading JavaScript code - uncomment the one you want.
    *

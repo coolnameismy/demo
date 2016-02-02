@@ -23,6 +23,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		F045747B1C50A6F4009826B4 /* MyNativeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F045747A1C50A6F4009826B4 /* MyNativeModule.m */; };
+		F0858DF31C57479300FC4EFD /* libMyNativeStaticModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F07394521C57169B00DEAB83 /* libMyNativeStaticModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		F07394511C57169B00DEAB83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F073944D1C57169B00DEAB83 /* MyNativeStaticModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F07394411C570EE200DEAB83;
+			remoteInfo = MyNativeStaticModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +137,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		F04574791C50A6F4009826B4 /* MyNativeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyNativeModule.h; path = helloworld/MyNativeModule.h; sourceTree = "<group>"; };
 		F045747A1C50A6F4009826B4 /* MyNativeModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyNativeModule.m; path = helloworld/MyNativeModule.m; sourceTree = "<group>"; };
+		F073944D1C57169B00DEAB83 /* MyNativeStaticModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MyNativeStaticModule.xcodeproj; path = "../node_modules/my-native-static-module/MyNativeStaticModule.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0858DF31C57479300FC4EFD /* libMyNativeStaticModule.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -267,6 +277,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F073944D1C57169B00DEAB83 /* MyNativeStaticModule.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -306,6 +317,14 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* helloworld.app */,
 				00E356EE1AD99517003FC87E /* helloworldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F073944E1C57169B00DEAB83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F07394521C57169B00DEAB83 /* libMyNativeStaticModule.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,6 +395,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = F073944E1C57169B00DEAB83 /* Products */;
+					ProjectRef = F073944D1C57169B00DEAB83 /* MyNativeStaticModule.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -494,6 +517,13 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F07394521C57169B00DEAB83 /* libMyNativeStaticModule.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMyNativeStaticModule.a;
+			remoteRef = F07394511C57169B00DEAB83 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -622,6 +652,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/my-native-static-module/**",
 				);
 				INFOPLIST_FILE = helloworld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -638,6 +669,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/my-native-static-module/**",
 				);
 				INFOPLIST_FILE = helloworld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
