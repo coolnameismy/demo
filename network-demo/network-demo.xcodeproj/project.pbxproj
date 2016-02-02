@@ -22,6 +22,7 @@
 		F0858E261C5EFDF700FC4EFD /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E1B1C5EFDF700FC4EFD /* AFURLRequestSerialization.m */; };
 		F0858E271C5EFDF700FC4EFD /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E1D1C5EFDF700FC4EFD /* AFURLResponseSerialization.m */; };
 		F0858E281C5EFDF700FC4EFD /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E1F1C5EFDF700FC4EFD /* AFURLSessionManager.m */; };
+		F0858E2B1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		F0858E1D1C5EFDF700FC4EFD /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F0858E1E1C5EFDF700FC4EFD /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		F0858E1F1C5EFDF700FC4EFD /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		F0858E291C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsByNSURLConnection_ViewController.h; sourceTree = "<group>"; };
+		F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsByNSURLConnection_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				E16F24C91C3F549C00A5C274 /* LaunchScreen.storyboard */,
 				E16F24CC1C3F549C00A5C274 /* Info.plist */,
 				E16F24BB1C3F549B00A5C274 /* Supporting Files */,
+				F0858E291C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.h */,
+				F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */,
 			);
 			path = "network-demo";
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0858E201C5EFDF700FC4EFD /* AFHTTPRequestOperation.m in Sources */,
+				F0858E2B1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m in Sources */,
 				E16F24C31C3F549B00A5C274 /* ViewController.m in Sources */,
 				F0858E211C5EFDF700FC4EFD /* AFHTTPRequestOperationManager.m in Sources */,
 				F0858E231C5EFDF700FC4EFD /* AFNetworkReachabilityManager.m in Sources */,
