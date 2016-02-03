@@ -28,11 +28,36 @@
     //[self NSTimerFunction];
     
     //使用GCD的多线程
-    [self GCDFunction];
+//    [self GCDFunction];
+    
+    //NSOperation用法
+    [self NSOperationFunction];
     
 }
 
-
+-(void)NSOperationFunction{
+    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+    //设置队列最大数量
+    [queue setMaxConcurrentOperationCount:100];
+    //添加一个block任务
+    [queue addOperationWithBlock:^{
+        NSLog(@"block task 1");
+    }];
+    [queue addOperationWithBlock:^{
+        sleep(2);
+        NSLog(@"block task 2");
+    }];
+    //显示添加一个block任务
+    NSBlockOperation *block1 = [NSBlockOperation blockOperationWithBlock:^{
+        sleep(2);
+        NSLog(@"block task 3");
+    }];
+    [queue addOperation:block1];
+    //初始化一个子任务
+    NSInvocationOperation *oper1 = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(function1) object:nil];
+    [queue addOperation:oper1];
+    
+}
 
 /*
  *使用GCD 的多线程
