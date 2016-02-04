@@ -14,6 +14,7 @@
 		E16F24C81C3F549C00A5C274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16F24C71C3F549C00A5C274 /* Assets.xcassets */; };
 		E16F24CB1C3F549C00A5C274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16F24C91C3F549C00A5C274 /* LaunchScreen.storyboard */; };
 		F0858E2B1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */; };
+		F0858E2E1C63434D00FC4EFD /* http_queue_async_request_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E2D1C63434D00FC4EFD /* http_queue_async_request_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		E16F24CC1C3F549C00A5C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0858E291C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsByNSURLConnection_ViewController.h; sourceTree = "<group>"; };
 		F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsByNSURLConnection_ViewController.m; sourceTree = "<group>"; };
+		F0858E2C1C63434D00FC4EFD /* http_queue_async_request_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http_queue_async_request_ViewController.h; sourceTree = "<group>"; };
+		F0858E2D1C63434D00FC4EFD /* http_queue_async_request_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = http_queue_async_request_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				E16F24BB1C3F549B00A5C274 /* Supporting Files */,
 				F0858E291C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.h */,
 				F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */,
+				F0858E2C1C63434D00FC4EFD /* http_queue_async_request_ViewController.h */,
+				F0858E2D1C63434D00FC4EFD /* http_queue_async_request_ViewController.m */,
 			);
 			path = "network-demo";
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			files = (
 				F0858E2B1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m in Sources */,
 				E16F24C31C3F549B00A5C274 /* ViewController.m in Sources */,
+				F0858E2E1C63434D00FC4EFD /* http_queue_async_request_ViewController.m in Sources */,
 				E16F24C01C3F549B00A5C274 /* AppDelegate.m in Sources */,
 				E16F24BD1C3F549B00A5C274 /* main.m in Sources */,
 			);

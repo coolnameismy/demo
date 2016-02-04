@@ -37,10 +37,11 @@
 
 -(void)NSOperationFunction{
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-    //设置队列最大数量
-    [queue setMaxConcurrentOperationCount:100];
+    //设置队列最大同时进行的任务数量，1为串行队列
+    [queue setMaxConcurrentOperationCount:1];
     //添加一个block任务
     [queue addOperationWithBlock:^{
+       sleep(2);
         NSLog(@"block task 1");
     }];
     [queue addOperationWithBlock:^{
@@ -52,11 +53,45 @@
         sleep(2);
         NSLog(@"block task 3");
     }];
+    //设置任务优先级
+    //说明：优先级高的任务，调用的几率会更大,但不表示一定先调用
+    [block1 setQueuePriority:NSOperationQueuePriorityHigh];
     [queue addOperation:block1];
+    
+    NSBlockOperation *block2 = [NSBlockOperation blockOperationWithBlock:^{
+        sleep(2);
+        NSLog(@"block task 4，任务3依赖4");
+    }];
+    [queue addOperation:block2];
+    //任务3依赖4
+    [block1 addDependency:block2];
+    //设置任务完成的回调
+    [block2 setCompletionBlock:^{
+         NSLog(@"block task 4 comlpete");
+    }];
+
+    //设置block1完成后才会继续往下走
+    [block1 waitUntilFinished];
+     NSLog(@"block task 3 is waitUntilFinished!");
+    
     //初始化一个子任务
     NSInvocationOperation *oper1 = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(function1) object:nil];
     [queue addOperation:oper1];
     
+    [queue waitUntilAllOperationsAreFinished];
+    NSLog(@"queue comlpeted");
+    
+    //    取消全部操作
+    //    [queue cancelAllOperations];
+    //    暂停操作/恢复操作/是否暂定状态
+    //    [queue setSuspended:YES];[queue setSuspended:NO];[queue isSuspended];
+
+    
+    //操作优先级
+    
+    
+    
+    //      [queue waitUntilAllOperationsAreFinished];
 }
 
 /*
