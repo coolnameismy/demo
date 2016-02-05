@@ -23,9 +23,9 @@
 
 		var data = {
 			'name':'xxx',
-			'age':20
+			'age':21
 		}
-		sleep(10000);  //等待10秒
+		// sleep(10000);  //等待10秒
 		res.write(JSON.stringify(data));
 
 		res.end();

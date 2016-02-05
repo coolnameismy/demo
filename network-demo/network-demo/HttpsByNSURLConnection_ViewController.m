@@ -22,24 +22,21 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"测试网络请求" message:@"嘿嘿嘿" preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *act1 = [UIAlertAction actionWithTitle:@"loginCCT" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self loginCCT];
+    UIAlertAction *act1 = [UIAlertAction actionWithTitle:@"普通http请求" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self nornalHttpRequest];
     }];
-    UIAlertAction *act2 = [UIAlertAction actionWithTitle:@"requestToGetNoticeListWithUserId" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self requestToGetNoticeListWithUserId];
-    }];
-    UIAlertAction *act3 = [UIAlertAction actionWithTitle:@"githubUserInfo" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *act2 = [UIAlertAction actionWithTitle:@"https请求-github获取用户信息" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [self githubUserInfo];
     }];
-    UIAlertAction *act4 = [UIAlertAction actionWithTitle:@"requestToGetNoticeListWithUserId1" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [self requestToGetNoticeListWithUserId1];
-    }];
-    UIAlertAction *act5 = [UIAlertAction actionWithTitle:@"githubUserInfo" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [self githubUserInfo];
-    }];
-    UIAlertAction *act6 = [UIAlertAction actionWithTitle:@"githubUserInfo" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [self githubUserInfo];
-    }];
+
+//    
+//    UIAlertAction *act3 = [UIAlertAction actionWithTitle:@"githubUserInfo" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//        [self githubUserInfo];
+//    }];
+//    UIAlertAction *act4 = [UIAlertAction actionWithTitle:@"requestToGetNoticeListWithUserId1" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//
+//    }];
+    
     UIAlertAction *act00 = [UIAlertAction actionWithTitle:@"cannel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
@@ -47,10 +44,12 @@
     
     [alert addAction:act1];
     [alert addAction:act2];
-    [alert addAction:act3];
-    [alert addAction:act4];
-    [alert addAction:act5];
-    [alert addAction:act6];
+    [alert addAction:act00];
+    
+//    [alert addAction:act3];
+//    [alert addAction:act4];
+//    [alert addAction:act5];
+//    [alert addAction:act6];
     
     [self presentViewController:alert animated:YES completion:^{
         
@@ -60,65 +59,16 @@
 
 #pragma mark -网络请求
 
-- (void)loginCCT
-{
-    NSString *urlString = @"https://10.45.6.135:8443/ccm_web/staff/login";
-    NSString *boby = @"userCode=malin&password=11111&channel=1";
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[boby dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-    [conn start];
+- (void)nornalHttpRequest{
+    NSString *urlString = @"http://localhost:8001/";
+    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    [connection start];
 }
-- (void)requestToGetNoticeListWithUserId
-{
-    
-    NSString *urlString = @"https://10.45.6.135:8443/ccm_web/bulletin/qryBulletinRead";
-    NSString *boby = [NSString stringWithFormat:@"userId=%@&pageIndex=%d&pageSize=%d&channel=1",@"7",1,10];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[boby dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-    [conn start];
-}
-- (void)requestToGetNoticeListWithUserId1
-{
-    
-    NSString *urlString = @"https://10.45.6.135:8443/ccm_web/bulletin/qryBulletinRead";
-    NSString *boby = [NSString stringWithFormat:@"userId=%@&pageIndex=%d&pageSize=%d&channel=1",@"7",1,10];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[boby dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (data) {
-            NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-            //            NSString *aa = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            //            NSLog(@"----%@",aa);
-            NSLog(@"----%@",dict);
-            if (dict) {
-                int result=[[dict objectForKey:@"result"] intValue];
-                NSString *resultMsg=[dict objectForKey:@"resultMsg"];
-                if (result==0) {
-                    //                    complete(dict);
-                }else{
-                    //                    complete(nil);
-                    NSLog(resultMsg);
-                }
-                
-            }
-        }else{
-            NSLog(@"网络繁忙，请稍后重试！");
-        }
-    }];
-    
-}
-- (void)githubUserInfo
-{
+
+//https请求-github获取用户信息
+- (void)githubUserInfo{
     //string 转 url编码
     NSString *urlString = @"https://api.github.com/users/coolnameismy";
     NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];

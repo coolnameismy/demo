@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "http_queue_async_request_ViewController.h"
+#import "HttpsByNSURLConnection_ViewController.h"
 
 @interface ViewController ()
 
@@ -18,24 +20,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+
+    NSArray *btns = @[@"同步请求和异步队列请求demo",
+                      @"异步请求，https认证，上传下载请进度demo"];
+    int i = 0;
+    
+    for (NSString *item in btns) {
+        i++;
+        UIButton *btn =  [UIButton buttonWithType:UIButtonTypeSystem];
+        [btn setFrame:CGRectMake(10,30+i*30, self.view.frame.size.width - 20, 30)];
+        [btn setTitle:item forState:UIControlStateNormal];
+        [self.view addSubview:btn];
+        [btn addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(btnClicked:)]];
+        btn.tag = 10000+i;
+    }
+    
 }
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)btnClicked:(UITapGestureRecognizer *)sender{
+    UIButton *btn = (UIButton *)sender.view;
+    UIViewController *vc;
+    switch (btn.tag) {
+        case 10001:
+        {
+            vc = [[http_queue_async_request_ViewController alloc]init];
+        }
+            break;
+        case 10002:
+        {
+            vc = [[HttpsByNSURLConnection_ViewController alloc]init];
+        }
+            break;
+        default:
+            break;
+    }
+    [vc.view setBackgroundColor:[UIColor whiteColor]];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
