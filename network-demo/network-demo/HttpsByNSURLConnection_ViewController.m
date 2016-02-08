@@ -29,10 +29,11 @@
         [self githubUserInfo];
     }];
 
-//    
-//    UIAlertAction *act3 = [UIAlertAction actionWithTitle:@"githubUserInfo" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-//        [self githubUserInfo];
-//    }];
+    
+    UIAlertAction *act3 = [UIAlertAction actionWithTitle:@"download" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self download];
+    }];
+    
 //    UIAlertAction *act4 = [UIAlertAction actionWithTitle:@"requestToGetNoticeListWithUserId1" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
 //
 //    }];
@@ -44,9 +45,10 @@
     
     [alert addAction:act1];
     [alert addAction:act2];
+    [alert addAction:act3];
     [alert addAction:act00];
     
-//    [alert addAction:act3];
+
 //    [alert addAction:act4];
 //    [alert addAction:act5];
 //    [alert addAction:act6];
@@ -71,6 +73,16 @@
 - (void)githubUserInfo{
     //string 转 url编码
     NSString *urlString = @"https://api.github.com/users/coolnameismy";
+    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    [connection start];
+}
+
+//https请求-github获取用户信息
+- (void)download{
+    //string 转 url编码
+    NSString *urlString = @"http://localhost:8001/download";
     NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
@@ -102,6 +114,11 @@
 //接收响应
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     NSLog(@"=================didReceiveData=================");
+    UIImage *img = [UIImage imageWithData:data];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:img];
+    [imageView setFrame:CGRectMake(0, 0, 200, 200)];
+    [self.view addSubview:imageView];
+    
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     NSLog(@"data:%@",dic);
 }

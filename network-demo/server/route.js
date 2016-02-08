@@ -1,3 +1,6 @@
+var fs = require("fs");
+var path = require("path");
+
 	//自己写的一个简单的路由
 	module.exports = {
 		layers:[],
@@ -7,7 +10,12 @@
 		},
 		handler:function(req,res){
 			console.log('handler');
-			get(req,res); 
+			console.log(req.url);
+			switch(req.url){
+				case '/' : get(req,res); break;
+				case "/download" : download(req,res); break;
+			}
+			
 		}
 	}
 
@@ -29,6 +37,23 @@
 		res.write(JSON.stringify(data));
 
 		res.end();
+	}
+
+	function download(req,res){
+		//写入头
+	    var downloadFilePath = "./1.jpg";
+	    var filename = path.basename(downloadFilePath);
+	    var filesize = fs.readFileSync(downloadFilePath).length;
+	    res.setHeader('Content-Disposition','attachment;filename=' + filename);//此处是关键
+	    res.setHeader('Content-Length',filesize);
+	    res.setHeader('Content-Type','application/octet-stream');
+	    var fileStream = fs.createReadStream(downloadFilePath,{bufferSize:1024 * 1024});
+		 fileStream.pipe(res,{end:true});
+		// res.writeHead(200, {'content-type': 'text/html'});
+		// return fileStream;
+  //        return file.stream(true).pipe(res);  
+  		// res.end('点击此处开始下载');
+
 	}
 
 
