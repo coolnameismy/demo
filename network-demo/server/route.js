@@ -1,5 +1,8 @@
 var fs = require("fs");
 var path = require("path");
+var formidable = require('formidable');
+var uuid = require('node-uuid');
+
 
 	//自己写的一个简单的路由
 	module.exports = {
@@ -14,6 +17,7 @@ var path = require("path");
 			switch(req.url){
 				case '/' : get(req,res); break;
 				case "/download" : download(req,res); break;
+				case "/upload" : upload(req,res); break;
 			}
 			
 		}
@@ -39,9 +43,11 @@ var path = require("path");
 		res.end();
 	}
 
+	//文件下载
 	function download(req,res){
 		//写入头
-	    var downloadFilePath = "./1.jpg";
+	    // var downloadFilePath = "./1.jpg";
+	    var downloadFilePath = "./IMG_0222.jpg";
 	    var filename = path.basename(downloadFilePath);
 	    var filesize = fs.readFileSync(downloadFilePath).length;
 	    res.setHeader('Content-Disposition','attachment;filename=' + filename);//此处是关键
@@ -50,13 +56,43 @@ var path = require("path");
 	    var fileStream = fs.createReadStream(downloadFilePath,{bufferSize:1024 * 1024});
 		 fileStream.pipe(res,{end:true});
 		// res.writeHead(200, {'content-type': 'text/html'});
-		// return fileStream;
-  //        return file.stream(true).pipe(res);  
-  		// res.end('点击此处开始下载');
-
 	}
 
-
+	//文件上传
+	function upload(req,res){
+		//创建上传表单
+		var form = new formidable.IncomingForm();
+		//设置编辑
+		form.encoding = 'utf-8';
+		//设置上传目录
+		form.uploadDir = './upload/';
+		form.keepExtensions = true;
+		//文件大小
+		form.maxFieldsSize = 10 * 1024 * 1024;
+		form.parse(req, function (err, fields, files) {
+			if(err) {
+				res.send(err);
+				return;
+			}
+			// console.log(fields);
+			console.log("=====");
+			// console.log(files);
+			// console.log(files.file.name);
+			var extName = /\.[^\.]+/.exec(files.file.name);
+			var ext = Array.isArray(extName)
+				? extName[0]
+				: '';
+			//重命名，以防文件重复
+			var avatarName = uuid() + ext;
+			//移动的文件目录
+			var newPath = form.uploadDir + avatarName;
+			fs.renameSync(files.file.path, newPath);
+			// res.send('success');
+			var msg = { "status":1,"msg":"succeed"}
+			res.write(JSON.stringify(msg));
+			res.end();
+		});
+	}
 //模拟阻塞
 function sleep(milliSeconds) { 
     var startTime = new Date().getTime(); 

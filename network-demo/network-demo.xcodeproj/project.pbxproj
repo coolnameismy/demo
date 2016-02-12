@@ -13,6 +13,9 @@
 		E16F24C61C3F549C00A5C274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16F24C41C3F549C00A5C274 /* Main.storyboard */; };
 		E16F24C81C3F549C00A5C274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16F24C71C3F549C00A5C274 /* Assets.xcassets */; };
 		E16F24CB1C3F549C00A5C274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16F24C91C3F549C00A5C274 /* LaunchScreen.storyboard */; };
+		E1E10C6E1C6C89AA006240CF /* Download_and_upload_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C6D1C6C89AA006240CF /* Download_and_upload_ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E1E10C701C6CE374006240CF /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1E10C6F1C6CE374006240CF /* 1.jpg */; settings = {ASSET_TAGS = (); }; };
+		E1E10C721C6D8AD5006240CF /* IMG_0222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1E10C711C6D8AD5006240CF /* IMG_0222.jpg */; settings = {ASSET_TAGS = (); }; };
 		F0858E2B1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */; };
 		F0858E2E1C63434D00FC4EFD /* http_queue_async_request_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0858E2D1C63434D00FC4EFD /* http_queue_async_request_ViewController.m */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,10 @@
 		E16F24C71C3F549C00A5C274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E16F24CA1C3F549C00A5C274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16F24CC1C3F549C00A5C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E10C6C1C6C89AA006240CF /* Download_and_upload_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Download_and_upload_ViewController.h; sourceTree = "<group>"; };
+		E1E10C6D1C6C89AA006240CF /* Download_and_upload_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Download_and_upload_ViewController.m; sourceTree = "<group>"; };
+		E1E10C6F1C6CE374006240CF /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		E1E10C711C6D8AD5006240CF /* IMG_0222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0222.jpg; sourceTree = "<group>"; };
 		F0858E291C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsByNSURLConnection_ViewController.h; sourceTree = "<group>"; };
 		F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsByNSURLConnection_ViewController.m; sourceTree = "<group>"; };
 		F0858E2C1C63434D00FC4EFD /* http_queue_async_request_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http_queue_async_request_ViewController.h; sourceTree = "<group>"; };
@@ -64,6 +71,8 @@
 		E16F24BA1C3F549B00A5C274 /* network-demo */ = {
 			isa = PBXGroup;
 			children = (
+				E1E10C6F1C6CE374006240CF /* 1.jpg */,
+				E1E10C711C6D8AD5006240CF /* IMG_0222.jpg */,
 				E16F24BE1C3F549B00A5C274 /* AppDelegate.h */,
 				E16F24BF1C3F549B00A5C274 /* AppDelegate.m */,
 				E16F24C11C3F549B00A5C274 /* ViewController.h */,
@@ -77,6 +86,8 @@
 				F0858E2A1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m */,
 				F0858E2C1C63434D00FC4EFD /* http_queue_async_request_ViewController.h */,
 				F0858E2D1C63434D00FC4EFD /* http_queue_async_request_ViewController.m */,
+				E1E10C6C1C6C89AA006240CF /* Download_and_upload_ViewController.h */,
+				E1E10C6D1C6C89AA006240CF /* Download_and_upload_ViewController.m */,
 			);
 			path = "network-demo";
 			sourceTree = "<group>";
@@ -147,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E16F24CB1C3F549C00A5C274 /* LaunchScreen.storyboard in Resources */,
+				E1E10C721C6D8AD5006240CF /* IMG_0222.jpg in Resources */,
+				E1E10C701C6CE374006240CF /* 1.jpg in Resources */,
 				E16F24C81C3F549C00A5C274 /* Assets.xcassets in Resources */,
 				E16F24C61C3F549C00A5C274 /* Main.storyboard in Resources */,
 			);
@@ -162,6 +175,7 @@
 				F0858E2B1C60A05F00FC4EFD /* HttpsByNSURLConnection_ViewController.m in Sources */,
 				E16F24C31C3F549B00A5C274 /* ViewController.m in Sources */,
 				F0858E2E1C63434D00FC4EFD /* http_queue_async_request_ViewController.m in Sources */,
+				E1E10C6E1C6C89AA006240CF /* Download_and_upload_ViewController.m in Sources */,
 				E16F24C01C3F549B00A5C274 /* AppDelegate.m in Sources */,
 				E16F24BD1C3F549B00A5C274 /* main.m in Sources */,
 			);

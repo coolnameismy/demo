@@ -22,17 +22,13 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"测试网络请求" message:@"嘿嘿嘿" preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *act1 = [UIAlertAction actionWithTitle:@"普通http请求" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *act1 = [UIAlertAction actionWithTitle:@"普通http请求" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self nornalHttpRequest];
     }];
-    UIAlertAction *act2 = [UIAlertAction actionWithTitle:@"https请求-github获取用户信息" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *act2 = [UIAlertAction actionWithTitle:@"https请求-github获取用户信息" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self githubUserInfo];
     }];
 
-    
-    UIAlertAction *act3 = [UIAlertAction actionWithTitle:@"download" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [self download];
-    }];
     
 //    UIAlertAction *act4 = [UIAlertAction actionWithTitle:@"requestToGetNoticeListWithUserId1" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
 //
@@ -45,7 +41,7 @@
     
     [alert addAction:act1];
     [alert addAction:act2];
-    [alert addAction:act3];
+
     [alert addAction:act00];
     
 
@@ -79,15 +75,7 @@
     [connection start];
 }
 
-//https请求-github获取用户信息
-- (void)download{
-    //string 转 url编码
-    NSString *urlString = @"http://localhost:8001/download";
-    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-    [connection start];
-}
+
 
 #pragma mark -网络请求委托
 
@@ -109,15 +97,18 @@
     NSLog(@"=================didReceiveResponse=================");
     NSHTTPURLResponse *resp = (NSHTTPURLResponse *)response;
     NSLog(@"response:%@",resp);
+
 }
 
 //接收响应
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     NSLog(@"=================didReceiveData=================");
-    UIImage *img = [UIImage imageWithData:data];
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:img];
-    [imageView setFrame:CGRectMake(0, 0, 200, 200)];
-    [self.view addSubview:imageView];
+//    UIImage *img = [UIImage imageWithData:data];
+//    UIImageView *imageView = [[UIImageView alloc]initWithImage:img];
+//    [imageView setFrame:CGRectMake(30, 30, 200, 200)];
+//    [self.view addSubview:imageView];
+    
+//    NSLog(@"data.length:%lu",(unsigned long)data.length);
     
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     NSLog(@"data:%@",dic);
