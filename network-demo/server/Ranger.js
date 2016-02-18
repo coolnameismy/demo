@@ -7,12 +7,6 @@ var Ranger = function(){
 		var server = require("http").createServer(
 			//中间件
 			function(req,res){
-				//打印request
-				// console.log(req);
-				// for(var key in req){
-				// 	console.log(key);
-				// }
-				console.log(req["headers"]);
 				//交给路由
 				route.handler(req,res);
 			});

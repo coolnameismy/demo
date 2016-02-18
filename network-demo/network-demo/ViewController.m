@@ -10,6 +10,7 @@
 #import "http_queue_async_request_ViewController.h"
 #import "HttpsByNSURLConnection_ViewController.h"
 #import "Download_and_upload_ViewController.h"
+#import "Cookies_Demo_ViewController.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,8 @@
 
     NSArray *btns = @[@"同步请求和异步队列请求demo",
                       @"异步请求，https认证demo",
-                      @"上传下载文件显示进度demo"];
+                      @"上传下载文件显示进度demo",
+                      @"cookie的demo"];
     int i = 0;
     
     for (NSString *item in btns) {
@@ -57,6 +59,11 @@
         case 10003:
         {
             vc = [[Download_and_upload_ViewController alloc]init];
+        }
+            break;
+        case 10004:
+        {
+            vc = [[Cookies_Demo_ViewController alloc]init];
         }
             break;
         default:
