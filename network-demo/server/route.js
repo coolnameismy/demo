@@ -2,6 +2,7 @@ var fs = require("fs");
 var path = require("path");
 var formidable = require('formidable');
 var uuid = require('node-uuid');
+var exclude = require('./exclude');
 
 
 	//自己写的一个简单的路由
@@ -12,12 +13,19 @@ var uuid = require('node-uuid');
 			layers.push(layer);
 		},
 		handler:function(req,res){
-			console.log('handler');
+			
+			//排除一些不需要中间件处理的路径
+			if(exclude(req.url)){
+				// console.log("exclude");
+				return;
+			}
+			console.log(req["headers"]);	
 			console.log(req.url);
 			switch(req.url){
 				case '/' : get(req,res); break;
 				case "/download" : download(req,res); break;
 				case "/upload" : upload(req,res); break;
+				case "/cookie" : cookie(req,res); break;
 			}
 			
 		}
@@ -28,6 +36,7 @@ var uuid = require('node-uuid');
 		返回值：{"name":"xxx","age":20}
 	*/
 	function get(req,res){
+		console.log("client cookie:"+req.headers.cookie);
 		//写入头
 		res.writeHead(200,{
 			'Content-type':'text/json'
@@ -93,8 +102,39 @@ var uuid = require('node-uuid');
 			res.end();
 		});
 	}
+
+	//设置cookie
+	function cookie(req,res){
+		//打印客户端的cookie
+		console.log("client cookie:"+req.headers.cookie);
+		 
+		var today = new Date();
+		var time = today.getTime() + 60*1000;
+		var time2 = new Date(time);
+		var timeObj = time2.toGMTString();
+		// res.writeHead({
+		//    'Set-Cookie':'myCookie="type=ninja", "language=javascript";path="/";Expires='+timeObj+';httpOnly=true'
+		// });
+		// res.writeHead(200,{
+		// 	'Content-type':'text/json',
+		// 	"Set-Cookie":['a=001', 'b=1112', 'c=2222']
+		// });
+
+	// res.setHeader("Set-Cookie", "a='001',b='002',c=003");
+	    res.setHeader("Set-Cookie", ['d=001;maxAge=10*1000', 'e=1112', 'f=2222;Expires='+timeObj]);
+
+		var msg = { "status":1,"msg":"succeed"}
+		res.write(JSON.stringify(msg));
+		res.end();
+	}
+
+
 //模拟阻塞
 function sleep(milliSeconds) { 
     var startTime = new Date().getTime(); 
     while (new Date().getTime() < startTime + milliSeconds);
  };
+
+
+
+

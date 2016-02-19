@@ -134,6 +134,8 @@
     NSLog(@"=================didReceiveResponse=================");
     NSHTTPURLResponse *resp = (NSHTTPURLResponse *)response;
     NSLog(@"response:%@",resp);
+    //获取Content-Length
+    //[[((NSHTTPURLResponse *)response) allHeaderFields]objectForKey:@"Content-length"]
     
 }
 
@@ -163,6 +165,10 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
     NSLog(@"=================totalBytesWritten=================");
     NSLog(@"didSendBodyData:%ld,totalBytesWritten:%ld,totalBytesExpectedToWrite:%ld",(long)bytesWritten,(long)totalBytesWritten,(long)totalBytesExpectedToWrite);
     NSLog(@"上传进度%ld%%",(long)(totalBytesWritten*100 / totalBytesExpectedToWrite));
+    
+    //测试取消上传
+    //if((totalBytesWritten*100 / totalBytesExpectedToWrite) > 50){[connection cancel];}
+
 }
 
 //- (nullable NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse{
