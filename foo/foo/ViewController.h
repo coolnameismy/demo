@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LYWUser.h"
+#import "ViewController1.h"
 
 
 @interface ViewController : UIViewController

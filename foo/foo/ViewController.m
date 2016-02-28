@@ -8,32 +8,74 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
+#import "extobjc.h"
 
+//
+//
+//#define ext_weakify_(INDEX, CONTEXT, VAR) \
+//CONTEXT __typeof__(VAR) metamacro_concat(VAR, _weak_) = (VAR);
+//
+//
+//
+//#define weakify(...) \
+//ext_keywordify \
+//metamacro_foreach_cxt(ext_weakify_,, __weak, __VA_ARGS__)
+//
+//#if defined(DEBUG) && !defined(NDEBUG)
+//#define ext_keywordify autoremetamacro_argcountleasepool {}
+//#else
+//#define ext_keywordify try {} @catch (...) {}
+//#endif
+//
+//#define metamacro_foreach_cxt(MACRO, SEP, CONTEXT, ...) \
+//metamacro_concat(metamacro_foreach_cxt, metamacro_argcount(__VA_ARGS__))(MACRO, SEP, CONTEXT, __VA_ARGS__)
+//
+//#define metamacro_argcount(...) \
+//metamacro_at(20, __VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+//
+///**
+// * Returns A and B concatenated after full macro expansion.
+// */
+//#define metamacro_concat(A, B) \
+//metamacro_concat_(A, B)
+//
+//
+//#define ext_strongify_(INDEX, VAR) \
+//__strong __typeof__(VAR) VAR = metamacro_concat(VAR, _weak_);
+
+  
 
 @interface ViewController ()
+
+typedef void(^LYWCompletionBlock)(NSString *name);
+
+
+
+@property (nonatomic,copy) LYWCompletionBlock completionBlock;
+@property (nonatomic,copy) dispatch_block_t completionBlock1;
+
+
+@property (nonatomic, copy) NSString *aaa;
+
 
 @end
 
 @implementation ViewController
 
+
 -(instancetype)init{
     self = [super init];
     if (self) {
-        NSLog(@"%@", NSStringFromClass([self class]));
-        NSLog(@"%@", NSStringFromClass([super class]));
-    }
+          }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+    
     _liu = [LYWUser factoryA];
     
-//    [self performSelector:@selector(hi)];
-    NSLog(@"%@", NSStringFromClass([self class]));
-    NSLog(@"%@", NSStringFromClass([super class]));
-    
-//    [self text1];
 }
 
 
@@ -42,12 +84,83 @@
 //    Class newClass =  objc_allocateClassPair([NSObject class],"TestClass",0);
 //    class_addMethod(newClass, @selector(hello), (IMP)hello, "v:@");
 //    objc_registerClassPair(newClass);
-    
-    
-  }
 
--(void)hello{
+  [self blockTest];
+}
+
+- (void)blockTest{
+    
+//    self.completionBlock1 = ^(){
+//        NSLog(@"complete");NSLog(@"%@", self);
+//    };
+    
+//    __weak __typeof(self) weakSelf = self;
+//    
+//    dispatch_block_t completionBlock2 = ^(){
+//        [weakSelf hello];
+//    };
+
+//
+//    self.completionBlock1 = ^(){
+//        NSLog(@"complete");
+//    };
+//    
+////    [UIView animateWithDuration:1 animations:^{
+////        self.view.backgroundColor = [UIColor redColor];
+////    } completion:completionBlock];
+//    ViewController1 *myController = [[ViewController1 alloc] init];
+//    [self presentViewController:myController
+//                       animated:YES
+//                     completion:completionBlock2];
+    
+
+
+    
+//    [self sayHelloTo:@"liuyanwei" completion:^(NSString *name) {
+//        NSLog(@"goodbey %@",name);
+//    }];
+    
+    
+//    self.completionBlock = ^(NSString *name){
+//         NSLog(@"goodbey %@",name);
+//         NSLog(@"%@", self);
+//    };
+    
+//    __weak __typeof(self) weakSelf = self;
+//    self.completionBlock = ^(NSString *name){
+//        NSLog(@"goodbey %@",name);
+//        NSLog(@"%@", weakSelf);
+//    };
+//    
+//    [self sayHelloTo:@"liuyanwei" completion:self.completionBlock];
+    
+    __weak __typeof(self) weakSelf = self;
+    self.completionBlock = ^(NSString *name){
+        NSLog(@"goodbey %@",name);
+        [weakSelf helloWithSelf:weakSelf];
+        [weakSelf helloWithSelf:weakSelf];
+    };
+
+    [self sayHelloTo:@"liuyanwei" completion:self.completionBlock];
+}
+
+- (void)hello{
      NSLog(@"hello");
+}
+- (void)helloWithSelf:(ViewController *)s {
+
+    __strong __typeof(s) strongSelf = s;
+    
+    if (strongSelf) {
+        NSLog(@"hello,s:%@",strongSelf);
+    }
+    strongSelf = nil;
+
+}
+
+- (void)sayHelloTo:(NSString *)name completion:(void(^)(NSString *name))completion{
+    NSLog(@"hello %@",name);
+    completion(name);
 }
 
 //动态注册类和方法
