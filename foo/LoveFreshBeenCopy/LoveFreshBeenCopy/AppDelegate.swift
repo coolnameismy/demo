@@ -15,7 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+
+    window = UIWindow(frame: KScreenBounds);
+    window!.makeKeyAndVisible();
+    
+    let isFirstOpen = NSUserDefaults.standardUserDefaults().objectForKey("isFirstOpen")
+    if (isFirstOpen != nil) {
+      //非首次打开
+      window?.rootViewController = HomeViewController();
+    } else {
+      //首次打开
+      NSUserDefaults.standardUserDefaults().setObject("isFirstOpen", forKey: "isFirstOpen")
+      window?.rootViewController = GuideViewController();
+    }
+    
     return true
   }
 

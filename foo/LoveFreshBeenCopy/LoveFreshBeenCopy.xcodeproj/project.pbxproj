@@ -12,16 +12,24 @@
 		E1E10CAE1C8DCF7F006240CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E10CAC1C8DCF7F006240CF /* Main.storyboard */; };
 		E1E10CB01C8DCF7F006240CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E10CAF1C8DCF7F006240CF /* Assets.xcassets */; };
 		E1E10CB31C8DCF7F006240CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E10CB11C8DCF7F006240CF /* LaunchScreen.storyboard */; };
+		E1E10CBB1C8DDB66006240CF /* LYWTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E10CBA1C8DDB66006240CF /* LYWTheme.swift */; settings = {ASSET_TAGS = (); }; };
+		E1E10CBE1C8DDE5F006240CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E10CBD1C8DDE5F006240CF /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E1E10CC01C8DDE84006240CF /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E10CBF1C8DDE84006240CF /* GuideViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E1E10CC31C8DDEF2006240CF /* LYWCommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E10CC21C8DDEF2006240CF /* LYWCommonHelper.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E1E10CA51C8DCF7F006240CF /* LoveFreshBeenCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFreshBeenCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E10CA81C8DCF7F006240CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1E10CAA1C8DCF7F006240CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1E10CAA1C8DCF7F006240CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		E1E10CAD1C8DCF7F006240CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E10CAF1C8DCF7F006240CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E10CB21C8DCF7F006240CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1E10CB41C8DCF7F006240CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E10CBA1C8DDB66006240CF /* LYWTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYWTheme.swift; sourceTree = "<group>"; };
+		E1E10CBD1C8DDE5F006240CF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E1E10CBF1C8DDE84006240CF /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		E1E10CC21C8DDEF2006240CF /* LYWCommonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYWCommonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,35 @@
 		E1E10CA71C8DCF7F006240CF /* LoveFreshBeenCopy */ = {
 			isa = PBXGroup;
 			children = (
+				E1E10CC11C8DDEB1006240CF /* Common */,
+				E1E10CBC1C8DDE3D006240CF /* Views */,
 				E1E10CA81C8DCF7F006240CF /* AppDelegate.swift */,
-				E1E10CAA1C8DCF7F006240CF /* ViewController.swift */,
 				E1E10CAC1C8DCF7F006240CF /* Main.storyboard */,
 				E1E10CAF1C8DCF7F006240CF /* Assets.xcassets */,
 				E1E10CB11C8DCF7F006240CF /* LaunchScreen.storyboard */,
 				E1E10CB41C8DCF7F006240CF /* Info.plist */,
+				E1E10CBA1C8DDB66006240CF /* LYWTheme.swift */,
 			);
 			path = LoveFreshBeenCopy;
+			sourceTree = "<group>";
+		};
+		E1E10CBC1C8DDE3D006240CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1E10CAA1C8DCF7F006240CF /* ViewController.swift */,
+				E1E10CBD1C8DDE5F006240CF /* HomeViewController.swift */,
+				E1E10CBF1C8DDE84006240CF /* GuideViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1E10CC11C8DDEB1006240CF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E1E10CC21C8DDEF2006240CF /* LYWCommonHelper.swift */,
+			);
+			name = Common;
+			path = Views/Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E10CBB1C8DDB66006240CF /* LYWTheme.swift in Sources */,
+				E1E10CC31C8DDEF2006240CF /* LYWCommonHelper.swift in Sources */,
 				E1E10CAB1C8DCF7F006240CF /* ViewController.swift in Sources */,
 				E1E10CA91C8DCF7F006240CF /* AppDelegate.swift in Sources */,
+				E1E10CC01C8DDE84006240CF /* GuideViewController.swift in Sources */,
+				E1E10CBE1C8DDE5F006240CF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = LoveFreshBeenCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.loveFreshBeenCopy.LoveFreshBeenCopy;
@@ -257,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = LoveFreshBeenCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.loveFreshBeenCopy.LoveFreshBeenCopy;
