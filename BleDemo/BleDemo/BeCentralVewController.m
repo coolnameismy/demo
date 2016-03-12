@@ -14,7 +14,7 @@
     //系统蓝牙设备管理对象，可以把他理解为主设备，通过他，可以去扫描和链接外设
     CBCentralManager *manager;
     UILabel *info;
-    //发现设备数组
+    //用于保存被发现设备
     NSMutableArray *discoverPeripherals;
 }
 
@@ -38,7 +38,8 @@
     
     //初始化并设置委托和线程队列，最好一个线程的参数可以为nil，默认会就main线程
     manager = [[CBCentralManager alloc]initWithDelegate:self queue:dispatch_get_main_queue()];
-    //持有发现的设备
+
+  //持有发现的设备,如果不持有设备会导致CBPeripheralDelegate方法不能正确回调
     discoverPeripherals = [[NSMutableArray alloc]init];
     //页面样式
     [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -93,10 +94,11 @@
         /*
          一个主设备最多能连7个外设，每个外设最多只能给一个主设备连接,连接成功，失败，断开会进入各自的委托
          - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral;//连接外设成功的委托
-         - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;//外设连接失败的委托
+         - (void)centra`lManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;//外设连接失败的委托
          - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;//断开外设的委托
          */
-    
+  
+        //找到的设备必须持有它，否则CBCentralManager中也不会保存peripheral，那么CBPeripheralDelegate中的方法也不会被调用！！
         [discoverPeripherals addObject:peripheral];
         [central connectPeripheral:peripheral options:nil];
 //    }
