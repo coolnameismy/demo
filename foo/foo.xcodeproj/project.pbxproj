@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1E10C901C81C8F3006240CF /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C791C81C8F3006240CF /* EXTADT.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C911C81C8F3006240CF /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C7B1C81C8F3006240CF /* EXTConcreteProtocol.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C921C81C8F3006240CF /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C7F1C81C8F3006240CF /* EXTNil.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C931C81C8F3006240CF /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C831C81C8F3006240CF /* EXTRuntimeExtensions.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C941C81C8F3006240CF /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C851C81C8F3006240CF /* EXTSafeCategory.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C951C81C8F3006240CF /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C871C81C8F3006240CF /* EXTScope.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C961C81C8F3006240CF /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C891C81C8F3006240CF /* EXTSelectorChecking.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C971C81C8F3006240CF /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C8D1C81C8F3006240CF /* NSInvocation+EXT.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C981C81C8F3006240CF /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C8F1C81C8F3006240CF /* NSMethodSignature+EXT.m */; settings = {ASSET_TAGS = (); }; };
-		E1E10C9B1C81E416006240CF /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C9A1C81E416006240CF /* ViewController1.m */; settings = {ASSET_TAGS = (); }; };
+		E1E10C901C81C8F3006240CF /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C791C81C8F3006240CF /* EXTADT.m */; };
+		E1E10C911C81C8F3006240CF /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C7B1C81C8F3006240CF /* EXTConcreteProtocol.m */; };
+		E1E10C921C81C8F3006240CF /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C7F1C81C8F3006240CF /* EXTNil.m */; };
+		E1E10C931C81C8F3006240CF /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C831C81C8F3006240CF /* EXTRuntimeExtensions.m */; };
+		E1E10C941C81C8F3006240CF /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C851C81C8F3006240CF /* EXTSafeCategory.m */; };
+		E1E10C951C81C8F3006240CF /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C871C81C8F3006240CF /* EXTScope.m */; };
+		E1E10C961C81C8F3006240CF /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C891C81C8F3006240CF /* EXTSelectorChecking.m */; };
+		E1E10C971C81C8F3006240CF /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C8D1C81C8F3006240CF /* NSInvocation+EXT.m */; };
+		E1E10C981C81C8F3006240CF /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C8F1C81C8F3006240CF /* NSMethodSignature+EXT.m */; };
+		E1E10C9B1C81E416006240CF /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E10C9A1C81E416006240CF /* ViewController1.m */; };
 		F0BD27E21C705CA300849B55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD27E11C705CA300849B55 /* main.m */; };
 		F0BD27E51C705CA300849B55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD27E41C705CA300849B55 /* AppDelegate.m */; };
 		F0BD27E81C705CA300849B55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD27E71C705CA300849B55 /* ViewController.m */; };
@@ -194,6 +194,7 @@
 				TargetAttributes = {
 					F0BD27DC1C705CA300849B55 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = QGDUF2E9QW;
 					};
 				};
 			};
@@ -356,11 +357,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = foo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.demo.foo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.foo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -369,11 +373,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = foo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.demo.foo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.foo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -74,8 +74,15 @@ typedef void(^LYWCompletionBlock)(NSString *name);
     [super viewDidLoad];
   
     
-    _liu = [LYWUser factoryA];
-    
+//    _liu = [LYWUser factoryA];
+  
+  
+  
+}
+
+-(void)ThreeDTouch{
+ 
+  
 }
 
 
@@ -85,7 +92,7 @@ typedef void(^LYWCompletionBlock)(NSString *name);
 //    class_addMethod(newClass, @selector(hello), (IMP)hello, "v:@");
 //    objc_registerClassPair(newClass);
 
-  [self blockTest];
+//  [self blockTest];
 }
 
 - (void)blockTest{
