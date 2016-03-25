@@ -45,7 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //动态注册Home Screen Quick Actions
   func registHomeScreenQuickActions(){
     let item1 = UIApplicationShortcutItem(type: "com.mycompany.myapp.newmessage", localizedTitle: "title", localizedSubtitle: "subtitle", icon: UIApplicationShortcutIcon(type: .Home), userInfo: nil);
+    // UIApplicationShortcutItem 代表一个item
+    // type： 唯一标示符的属性
+    // localizedTitle: 显示的标题
+    // localizedSubtitle: 显示的二级标题
+    // icon：显示的图片，可以自定义，也可以使用系统提供的样式
+    // userInfo: 包含一些信息
     
+    // 自定义的icon
+    //icon:UIApplicationShortcutIcon(templateImageName: "like")
     UIApplication.sharedApplication().shortcutItems = [item1];
   }
   

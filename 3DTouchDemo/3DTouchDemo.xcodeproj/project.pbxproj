@@ -12,6 +12,10 @@
 		E19FA4331C9FD956002A47EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19FA4311C9FD956002A47EE /* Main.storyboard */; };
 		E19FA4351C9FD956002A47EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19FA4341C9FD956002A47EE /* Assets.xcassets */; };
 		E19FA4381C9FD956002A47EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19FA4361C9FD956002A47EE /* LaunchScreen.storyboard */; };
+		E19FA4411CA2CF4A002A47EE /* LYWDKBaseTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FA4401CA2CF4A002A47EE /* LYWDKBaseTableVIewController.swift */; };
+		E19FA4851CA575D7002A47EE /* DemoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FA4841CA575D7002A47EE /* DemoTool.swift */; };
+		E19FA4871CA58EDC002A47EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FA4861CA58EDC002A47EE /* DetailViewController.swift */; };
+		E19FA4891CA590E2002A47EE /* LYWDKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19FA4881CA590E2002A47EE /* LYWDKBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E19FA4341C9FD956002A47EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E19FA4371C9FD956002A47EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E19FA4391C9FD956002A47EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E19FA4401CA2CF4A002A47EE /* LYWDKBaseTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYWDKBaseTableVIewController.swift; sourceTree = "<group>"; };
+		E19FA4841CA575D7002A47EE /* DemoTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTool.swift; sourceTree = "<group>"; };
+		E19FA4861CA58EDC002A47EE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E19FA4881CA590E2002A47EE /* LYWDKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYWDKBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			children = (
 				E19FA42D1C9FD956002A47EE /* AppDelegate.swift */,
 				E19FA42F1C9FD956002A47EE /* ViewController.swift */,
+				E19FA4861CA58EDC002A47EE /* DetailViewController.swift */,
 				E19FA4311C9FD956002A47EE /* Main.storyboard */,
 				E19FA4341C9FD956002A47EE /* Assets.xcassets */,
 				E19FA4361C9FD956002A47EE /* LaunchScreen.storyboard */,
@@ -68,6 +77,9 @@
 		E19FA43F1CA01663002A47EE /* DemoKit */ = {
 			isa = PBXGroup;
 			children = (
+				E19FA4401CA2CF4A002A47EE /* LYWDKBaseTableVIewController.swift */,
+				E19FA4841CA575D7002A47EE /* DemoTool.swift */,
+				E19FA4881CA590E2002A47EE /* LYWDKBaseViewController.swift */,
 			);
 			name = DemoKit;
 			path = swift;
@@ -144,6 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19FA4851CA575D7002A47EE /* DemoTool.swift in Sources */,
+				E19FA4891CA590E2002A47EE /* LYWDKBaseViewController.swift in Sources */,
+				E19FA4411CA2CF4A002A47EE /* LYWDKBaseTableVIewController.swift in Sources */,
+				E19FA4871CA58EDC002A47EE /* DetailViewController.swift in Sources */,
 				E19FA4301C9FD956002A47EE /* ViewController.swift in Sources */,
 				E19FA42E1C9FD956002A47EE /* AppDelegate.swift in Sources */,
 			);
@@ -257,6 +273,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumppo.demo.3DTouchDemo.-DTouchDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -268,6 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 3DTouchDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumppo.demo.3DTouchDemo.-DTouchDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
