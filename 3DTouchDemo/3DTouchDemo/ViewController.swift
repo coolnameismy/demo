@@ -15,6 +15,8 @@ class ViewController: LYWDKBaseTableVIewController {
     self.navigationItem.rightBarButtonItem = buttonForInsertNewRowWithDate()
     //注册委托
     registerForPreviewingWithDelegate(self, sourceView: view)
+    
+    tableViewData.append("3DTouch出现peek视图a");     tableViewData.append("3DTouch出现peek视图a");
   }
   
 }
