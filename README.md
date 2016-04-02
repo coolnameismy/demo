@@ -6,6 +6,20 @@
 
 ## 目录/文章连接
 
+
+####  iOS 3D touch开发
+
+-    [iOS 3D touch开发(一) Home Screen Quick Actions](http://liuyanwei.jumppo.com/2016/03/21/iOS-3DTouch-1.html)
+-    [iOS 3D touch开发(二) peek and pop - 预览和弹出](http://liuyanwei.jumppo.com/2016/04/01/iOS-3DTouch-2.html)
+
+#### network-demo
+-	[iOS networking（一） http同步请求](http://liuyanwei.jumppo.com/2016/02/03/ios-networking-1.html)
+-	[iOS networking（二） http异步队列请求](http://liuyanwei.jumppo.com/2016/02/03/ios-networking-2.html)
+-	[iOS networking（三） http异步请求和https认证](http://liuyanwei.jumppo.com/2016/02/04/ios-networking-3.html)
+-	[iOS networking（四） http异步文件上传和下载以及进度指示](http://liuyanwei.jumppo.com/2016/02/09/ios-networking-4.html)
+-	[iOS networking（五） 网络请求中的cookie](http://liuyanwei.jumppo.com/2016/02/13/ios-networking-5.html)
+
+
 #### AnimationAndEffects
 -	[iOS动画和特效（一）UIView动画和CoreAnimation](http://liuyanwei.jumppo.com/2015/10/30/iOS-Animation-UIViewAndCoreAnimation.html) 
 -	[iOS动画和特效（二）UIKit力学行为](http://liuyanwei.jumppo.com/2015/10/30/iOS-UIKit-Dynamics.html) 
@@ -34,5 +48,4 @@
 
 #### draw:
 [ios绘图基础](http://liuyanwei.jumppo.com/2015/07/25/ios-draw-base.html)
-
 
