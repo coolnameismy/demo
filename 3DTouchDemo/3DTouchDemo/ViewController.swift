@@ -18,7 +18,7 @@ class ViewController: LYWDKBaseTableVIewController {
     
     tableViewData.append("3DTouch出现peek视图a");     tableViewData.append("3DTouch出现peek视图a");
   }
-  
+
 }
 
 extension ViewController: UIViewControllerPreviewingDelegate {

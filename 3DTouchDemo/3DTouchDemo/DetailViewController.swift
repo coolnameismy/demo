@@ -47,5 +47,21 @@ class DetailViewController: LYWDKBaseViewController {
     override func previewActionItems() -> [UIPreviewActionItem] {
         return previewActions
     }
-
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if traitCollection.forceTouchCapability == .Available {
+            let touch = touches.first
+            NSLog("\n force:%f,maximumPossibleForce:%ff",touch!.force,touch!.maximumPossibleForce)
+            view.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: (touch?.force)! / (touch?.maximumPossibleForce)!, alpha: 100)
+        }
+//        - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//            //判断是否支持3Dtouch
+//            if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+//                UITouch *touch = [touches anyObject];
+//                NSLog(@"\n force:%f,maximumPossibleForce:%ff",touch.force,touch.maximumPossibleForce);
+//                CGFloat blue =  touch.force/touch.maximumPossibleForce;
+//                self.view.backgroundColor = [UIColor colorWithRed:.5 green:.5 blue:blue alpha:100];
+//            }
+//        }
+    }
 }
