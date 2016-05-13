@@ -11,12 +11,12 @@
 		E13AD5411BD5405400D61C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13AD53F1BD5405400D61C84 /* Main.storyboard */; };
 		E13AD5431BD5405400D61C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5421BD5405400D61C84 /* Assets.xcassets */; };
 		E13AD5461BD5405400D61C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5441BD5405400D61C84 /* LaunchScreen.storyboard */; };
-		E13AD5541BD5407100D61C84 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = E13AD54F1BD5407100D61C84 /* base.css */; settings = {ASSET_TAGS = (); }; };
-		E13AD5551BD5407100D61C84 /* common.js in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5501BD5407100D61C84 /* common.js */; settings = {ASSET_TAGS = (); }; };
-		E13AD5561BD5407100D61C84 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5511BD5407100D61C84 /* index.html */; settings = {ASSET_TAGS = (); }; };
-		E13AD5571BD5407100D61C84 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5521BD5407100D61C84 /* jquery.js */; settings = {ASSET_TAGS = (); }; };
-		E13AD5591BD5409200D61C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AD5581BD5409200D61C84 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F015C6DD1BD871250048DD3E /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6DC1BD871250048DD3E /* test.js */; settings = {ASSET_TAGS = (); }; };
+		E13AD5541BD5407100D61C84 /* base.css in Resources */ = {isa = PBXBuildFile; fileRef = E13AD54F1BD5407100D61C84 /* base.css */; };
+		E13AD5551BD5407100D61C84 /* common.js in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5501BD5407100D61C84 /* common.js */; };
+		E13AD5561BD5407100D61C84 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5511BD5407100D61C84 /* index.html */; };
+		E13AD5571BD5407100D61C84 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = E13AD5521BD5407100D61C84 /* jquery.js */; };
+		E13AD5591BD5409200D61C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AD5581BD5409200D61C84 /* ViewController.swift */; };
+		F015C6DD1BD871250048DD3E /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = F015C6DC1BD871250048DD3E /* test.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,7 +118,7 @@
 				TargetAttributes = {
 					E13AD5371BD5405400D61C84 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 9V9UW57Z55;
+						DevelopmentTeam = QGDUF2E9QW;
 					};
 				};
 			};
@@ -275,11 +275,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: liu yanwei (M6RAJ5X9QT)";
 				INFOPLIST_FILE = UIWebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.demo.UIWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73530da7-43c3-4c57-8f49-b8be5a2edbeb";
 			};
 			name = Debug;
 		};
@@ -287,11 +288,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: liu yanwei (M6RAJ5X9QT)";
 				INFOPLIST_FILE = UIWebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumppo.app.demo.UIWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73530da7-43c3-4c57-8f49-b8be5a2edbeb";
 			};
 			name = Release;
 		};
